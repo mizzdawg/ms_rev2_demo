@@ -1,0 +1,849 @@
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default styles for list items */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Normalize heading and paragraph margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* Set a consistent background-color and font family */
+body {
+    background-color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Set a default width for images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default table border spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Normalize form elements */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+header.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #0D274C;
+    z-index: 5;
+}
+
+nav {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-responsive-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav-container {
+    display: none;
+}
+
+.nav-icon,
+.nav-pop-menu-button-x,
+.acct-menu-x-icon,
+.nav-menu-pop-header,
+.nav-account-container {
+    cursor: pointer;
+}
+
+.nav-main-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-main-link a {
+    padding: 15px 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.nav-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.nav-account-text,
+.nav-log-in-text {
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    .nav-main-links {
+        gap: 35px;
+    }
+
+    .nav-main-link a {
+        font-size: 15px;
+    }
+
+    .nav-account-text {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-container {
+        display: block;
+    }
+
+    .nav-desktop-account-link {
+        display: none;
+    }
+
+    .nav-main-links {
+        display: none;
+    }
+}
+
+svg.nav-icon {
+    padding: 6px;
+    width: 40px;
+    fill: #fff;
+}
+
+svg.acct-icon-solid {
+    fill: #0D274C;
+}
+
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-container a {
+    line-height: 0;
+}
+
+.nav-logo {
+    height: 60px;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-logo {
+       height: 50px;
+    }
+}
+
+.nav-log-in-link {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.nav-sign-up-link {
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+
+.nav-sign-up-link:hover {
+    background: #f4f4f4;
+}
+
+.nav-sign-up-text {
+    color: #0D274C;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    .nav-log-in-text,
+    .nav-sign-up-text{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-sign-up-link,
+    .nav-log-in-text {
+        display: none;
+    }
+}
+
+.nav-pop-menu-overlay {
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0 0 0 / .7);
+    opacity: 0;
+    transition: opacity .05s ease-out;
+    z-index: 6;
+}
+
+.overlay-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-pop-menu-container {
+    transition: transform .1s ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.left-nav-pop {
+    transform: translateX(-100%);
+}
+
+.right-nav-pop {
+    transform: translateX(100%);
+}
+
+.menu-active {
+    transform: translateX(0%);
+}
+
+.nav-pop-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 280px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #fff;
+    height: 100%;
+    z-index: 5;
+    overflow-y: scroll;
+}
+
+.nav-pop-menu-navigation-right {
+    position: fixed;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.nav-pop-menu-navigation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 8px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-pop-menu-button-x {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(239 242 245 / 1);
+    border-radius: 6px;
+}
+
+.nav-menu-x-icon,
+.acct-menu-x-icon {
+    width: 20px;
+    fill: rgb(89, 99, 110);
+}
+
+.nav-menu-pop-links {
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+.nav-menu-pop-link a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: rgb(31, 35, 40);
+}
+
+.nav-menu-link-icon {
+    width: 16px;
+    fill: rgb(89, 99, 110);
+}
+
+.nav-menu-pop-link a span {
+    font-size: 17px;
+    line-height: 23px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.nav-pop-menu hr {
+    border: 0;
+    border-bottom: 1px solid #d1d9e0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.nav-menu-pop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+}
+
+.nav-menu-pop-header-text {
+    display: block;
+    font-size: 17px;
+    line-height: 23px;
+    color: rgb(31, 35, 40);
+}
+
+.nav-menu-pop-header-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-rotate {
+    transform: rotate(180deg);
+}
+
+.nav-menu-pop-sub-link {
+    display: flex;
+    gap: 8px;
+    padding-top: 4px;
+    padding-right: 16px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    font-size: 15px;
+}
+
+.nav-menu-pop-sub-link-league {
+    font-size: 14px;
+    color: rgba(87 111 118 / 1);
+}
+
+.sub-list-inactive {
+    display: none;
+}
+
+.mobile-link-logo {
+    width: 22px;
+}
+
+.nav-menu-pop-navigation-footer {
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.nav-menu-pop-navigation-footer-links {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.nav-menu-pop-navigation-footer-links a {
+    color: rgba(9 105 218);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-right: 12px;
+}
+
+.nav-menu-pop-navigation-footer-copyright {
+    color: rgba(89 99 110 / 1);
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 8px;
+}
+
+/* Account Flyout CSS */
+.nav-menu-manage-account-container {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 16px;
+}
+
+.nav-menu-pop-account-header-text {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.nav-menu-manage-account-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: #0D274C;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-menu-manage-acount-icon {
+    width: 20px;
+}
+
+.nav-menu-id-card {
+    width: 100%;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+}
+
+.upcoming-matchup-sub-item {
+    background-color: #F4F6F5;
+    border-radius: 5px;
+}
+
+.nav-menu-upcoming-games {
+    width: 100%;
+    padding-top: 4px;
+    padding-right: 16px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+}
+
+.nav-menu-upcoming-games-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu-upcoming-games-status span,
+.nav-menu-upcoming-games-date span {
+    font-size: 14px;
+    color: rgba(87 111 118 / 1);
+}
+
+.nav-menu-upcoming-games-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu-upcoming-games-status svg {
+    width: 8px;
+    fill: #228B22;
+}
+
+.nav-menu-upcoming-games-matchup {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-menu-upcoming-games-matchup-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu-upcoming-games-matchup span,
+.nav-menu-upcoming-games-matchup-team span {
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.nav-menu-upcoming-games-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu-upcoming-games-location svg {
+    width: 14px;
+    fill: rgba(9 105 218);
+}
+
+.nav-menu-upcoming-games-location a {
+    color: rgba(9 105 218);
+    font-size: 14px;
+    line-height: 1.2;
+    text-decoration: underline;
+}
+
+
+
+.nav-menu-logout-link {
+    display: flex;
+    gap: 5px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: rgb(31, 35, 40);
+}
+
+.nav-menu-logout-icon {
+    width: 20px;
+    fill: rgb(31, 35, 40);
+}
+
+/* main content CSS */
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 56px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f6f8f7;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    main {
+        padding-top: 76px
+    }
+}
+
+@media (min-width:900px) {
+    main {
+        padding-top: 86px
+    }
+}
+
+.main-ad-container {
+    width: 100%;
+    max-width: 700px;
+    padding-block: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-ad-container img {
+    width: 100%;
+    line-height: 0;
+}
+
+@media (min-width:768px) {
+    .main-ad-container {
+        padding-block: 30px;
+    }
+}
+
+.main-news-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.news-top-story,
+.news-headlines {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .main-news-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .news-top-story {
+        width: 660px;
+    }
+
+    .news-headlines {
+        width: 300px;
+        margin-left: 20px;
+    }
+}
+
+.main-container-top-story-info {
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+
+.main-container-top-story-text {
+    padding-block: 8px;
+    font-size: 14px;
+}
+
+.main-header {
+    font-family: 'Robot', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+.main-container-headlines {
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+
+.main-container-headlines li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-block: 7px;
+    border-bottom: 1px solid #dedede;
+    font-size: 13px;
+}
+
+.main-container-headlines li:last-of-type {
+    border: none;
+}
+
+.main-container-headlines-header span {
+    font-weight: 700;
+}
+
+.main-container-headline img {
+    width: 20px;
+}
+
+.main-container-headline span {
+    font-weight: 500;
+}
+
+/* divisions css */
+
+.divisions-container {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.main-division-header {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.divisions-quick-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.divisions-quick-nav-link {
+    color: rgba(0 102 204 / 1);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.divisions-quick-nav-link+.divisions-quick-nav-link {
+    border-left: 1px solid #cbccce;
+    margin-left: 6px;
+    padding-left: 6px;
+}
+
+.all-divisions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.division-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.division-header {
+    padding-top: 32px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(241 242 243 / 1);
+}
+
+.division {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-block: 4px;
+}
+
+.division-info h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+.division-details {
+    color: rgba(220 221 223 /1);
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
+}
+
+.division-details span a {
+    color: rgba(0 102 204 / 1);
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .divisions-container {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .main-division-header {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .divisions-quick-nav-link {
+        font-size: 15px;
+    }
+
+    .all-divisions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .division-container {
+        margin-right: 40px;
+    }
+
+    .division-header {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    .division-logo-container img {
+        width: 50px;
+    }
+
+    .division-info h4 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .division-details {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .division-details span a {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+}
+
+/* EMWSL NAV SPECIFIC CSS FOR DEMO */
+header.emwsl-nav-container {
+    background-color: #d41e00;
+}
+
+
+
+/* BSSL NAV SPECIFIC CSS FOR DEMO */
+header.bssl-nav-container {
+    background-color: #4b6d90;
+}
+
+/* .bssl-nav-logo {
+    width: 70px;
+    margin: 10px 0;
+} */
+
