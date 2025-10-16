@@ -2246,3 +2246,61 @@ Temp Mass Soccer HP CSS
 
 }
 
+/* ==============
+Date Selection
+============== */
+.date-selection {
+    display: flex;
+    padding: 1.5em .25em .25em;
+    align-items: center;
+}
+
+.date-chevrons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-chevron {
+    cursor: pointer;
+    width: 2.25em;
+    height: 2.25em;
+    fill: hsl(210, 100%, 40%);
+    padding: .5em;
+    transition: transform 100ms linear;
+}
+
+.date-chevron:hover,
+.date-chevron:active {
+    transform: scale(1.2);
+}
+
+.dates {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.date {
+    cursor: pointer;
+    color: hsl(220, 1%, 43%);
+    flex: 1;
+    font-size: .875rem;
+    display: grid;
+}
+
+.date:hover,
+.date:active {
+    color: hsl(221, 39%, 11%);
+}
+
+.date-active {
+    color: hsl(221, 39%, 11%);
+    font-weight: 800;
+}
+
+.date span {
+    justify-self: center;
+    text-wrap: nowrap;
+}
+
