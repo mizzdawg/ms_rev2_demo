@@ -100,16 +100,17 @@ main {
     .split-container-main {
         width: 100%;
     }
+
+    .section-container {
+        padding: 1.25em .75em;
+    }
 }
 
-.section-header-dropdoown-container {
-    padding-left: 8px;
-    padding-right: 8px;
-    display: flex;
-    flex-direction: column;
-}
+/* ==============
+Page Filtering Styles
+============== */
 
-.section-header-dropdown-label {
+/* .section-header-dropdown-label {
     color: rgba(142 145 150 / 1);
     font-family: 'Roboto' sans-serif;
     font-size: 10px;
@@ -117,14 +118,23 @@ main {
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+} */
+
+.section-header-dropdown-label {
+    color: rgba(31, 31, 31 / 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: .75rem;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .section-header-dropdown {
     position: relative;
-    width: 170px;
+    
 }
 
-.section-header-select {
+/* .section-header-select {
     appearance: none;
     width: 100%;
     padding-left: 12px;
@@ -138,6 +148,28 @@ main {
     cursor: pointer;
     background-color: rgb(235, 233, 231);
     border-radius: 4px;
+} */
+
+.section-header-select, 
+.date-container {
+    appearance: none;
+    width: 100%;
+    padding: .75em 2em .5em .5em;
+    color: rgb(31, 31, 31);
+    font-size: .875rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border: 1px solid rgb(31 31 31);
+    border-radius: 4px;
+}
+
+
+.section-header-select:disabled {
+    color: rgb(214, 214, 214);
+    border: 1px solid rgb(214, 214, 214);
+    cursor: not-allowed;
 }
 
 .section-header-dropdown-carrot {
@@ -154,7 +186,38 @@ main {
 }
 
 .carrot-down {
-    width: 14px;
+    width: 1em;
+    fill: rgb(31, 31, 31);
+}
+
+.section-header-select:disabled + .section-header-dropdown-carrot .carrot-down {
+    fill: rgb(214, 214, 214);
+}
+
+
+.date-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-chevrons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-chevron {
+    cursor: pointer;
+    fill: rgb(31, 31, 31);
+    width: 1em;
+    height: 1em;
+    transition: transform 100ms linear;
+}
+
+.date-chevron:hover,
+.date-chevron:active {
+    transform: scale(1.2);
 }
 
 .age-group-standings-header,
@@ -649,23 +712,28 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Roboto", sans-serif;
     padding-bottom: 8px;
     color: #48494A;
-    font-size: 13px;
+    font-size: 12px;
+    letter-spacing: .5px;
     line-height: 1.25;
-    font-weight: 700;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-.match-status-official,
-.match-status-postponed,
+.match-status-update {
+    display: flex;
+    align-items: center;
+}
+
 .team-event-status {
     padding: 5px;
     border-radius: 8px;
 }
 
 .match-status-official {
-    color: white;
-    background: #4E822B;
+    color: #198754;
 }
 
 .match-status-postponed {
@@ -731,9 +799,10 @@ main {
 
 .match-location-link {
     color: #48494A;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1;
     font-weight: 700;
+    letter-spacing: .5px;
     font-family: 'Roboto', sans-serif;
     width: 100%;
     white-space: nowrap;
@@ -833,42 +902,67 @@ main {
     align-items: flex-end;
 }
 
-.edit-game-btn {
-    color: rgb(12,16,20);
-    background: rgb(239,239,239);
-}
-
-.match-more-info-link {
-    margin-bottom: 8px;
-    color: white;
-    background: rgb(74, 93, 249)
-}
-
 .edit-game-btn,
-.match-more-info-link {
+.match-more-info-link,
+.avail-btn {
     padding: 8px 18px;
-    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    border: none;
-    border-radius: 8px;
+    letter-spacing: .5px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 150ms linear;
 }
 
-.edit-game-btn:hover {
-    background-color: rgb(231, 234, 238);
+.avail-btn {
+    margin-top: .5em;
+    color: #ffffff;
+    background-color: #006EE5;
 }
 
+.avail-btn:hover,
+.avail-btn:active {
+    background-color: #0063ce;
+}
+
+.edit-game-btn {
+    /* color: rgb(12,16,20); */
+    /* background: rgb(239,239,239); */
+    color: #FFFFFF;
+    background-color: #6C757D;
+}
+
+.edit-game-btn:hover,
 .edit-game-btn:active {
+    background-color: #5A6268;
+}
+
+/* .edit-game-btn:hover {
+    background-color: rgb(231, 234, 238);
+} */
+
+/* .edit-game-btn:active {
     color: rgba(12 16 20 / .75);
     background-color: rgb(231, 234, 238);
     transform: scale(.98);
+} */
+
+.match-more-info-link {
+    margin-bottom: .5em;
+    color: #007BFF;
+    /* background: rgb(74, 93, 249); */
+    border: 1px solid #007BFF;
 }
 
-.match-more-info-link:hover {
-    background: rgb(65, 80, 247);
+.match-more-info-link:hover,
+.match-more-info-link:focus,
+.match-more-info-link:active {
+    /* background: rgb(65, 80, 247); */
+    background-color: #f6f9fc;
 }
+
 
 .match-list-byes {
     margin-top: 20px;
@@ -2246,61 +2340,96 @@ Temp Mass Soccer HP CSS
 
 }
 
-/* ==============
-Date Selection
-============== */
-.date-selection {
-    display: flex;
-    padding: 1.5em .25em .25em;
-    align-items: center;
+/* =========
+Availability Module
+========= */
+
+.avail-module {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 9999;
 }
 
-.date-chevrons {
+.avail-module-active {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.date-chevron {
+.avail-module-x {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 .25em;
+    font-size: 2.5rem;
     cursor: pointer;
-    width: 2.25em;
-    height: 2.25em;
-    fill: hsl(210, 100%, 40%);
-    padding: .5em;
-    transition: transform 100ms linear;
 }
 
-.date-chevron:hover,
-.date-chevron:active {
-    transform: scale(1.2);
+.avail-module-form {
+    width: 100%;
+    max-width: 32em;
+    padding: 1em;
+    font-family: "Roboto", sans-serif;
 }
 
-.dates {
+.avail-radio-wrapper {
     display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-}
-
-.date {
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    position: relative;
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .5px;
+    border-radius: 5px;
     cursor: pointer;
-    color: hsl(220, 1%, 43%);
-    flex: 1;
-    font-size: .875rem;
-    display: grid;
+    background-color: #fff;
+    transition: background-color 150ms linear;
+    border: 1px solid #ccc;
 }
 
-.date:hover,
-.date:active {
-    color: hsl(221, 39%, 11%);
+.avail-radio-wrapper input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
-.date-active {
-    color: hsl(221, 39%, 11%);
-    font-weight: 800;
+.avail-form-option {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
 }
 
-.date span {
-    justify-self: center;
-    text-wrap: nowrap;
+.avail-radio-wrapper-yes input[type="radio"]:checked + .avail-form-option {
+    background-color: #d1e7dc;
 }
 
+.avail-radio-wrapper-maybe input[type="radio"]:checked + .avail-form-option {
+    background-color: #ccddef;
+}
+
+.avail-radio-wrapper-no input[type="radio"]:checked + .avail-form-option {
+    background-color: #f8d6d9;
+}
+
+.avail-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    resize: none;
+}

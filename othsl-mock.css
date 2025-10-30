@@ -562,8 +562,6 @@ main {
     display: flex;
     justify-content: center;
     padding-top: 56px;
-    padding-left: 10px;
-    padding-right: 10px;
     background-color: #f6f8f7;
     min-height: 100vh;
 }
@@ -579,7 +577,7 @@ main {
 
 @media (min-width:768px) {
     main {
-        padding-top: 76px
+        padding-top: 76px;
     }
 }
 

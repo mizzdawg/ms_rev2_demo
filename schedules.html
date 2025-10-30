@@ -672,9 +672,48 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- Filter by Age Group Section -->
+                
+                <!-- Filter by Season Section -->
+                 <div class="section-header-dropdown-container">
+                    <span class="section-header-dropdown-label">Select Season</span>
+                    <div class="section-header-dropdown">
+                        <select class="section-header-select">
+                            <option value="Fall 2025" selected>Fall 2025</option>
+                            <option value="Spring 2025">Spring 2025</option>
+                            <option value="Fall 2024">Fall 2024</option>
+                        </select>
+                        <div class="section-header-dropdown-carrot">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="carrot-down"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
                 <div class="section-header-dropdown-container">
-                    <span class="section-header-dropdown-label">Filter by Age Group</span>
+                    <span class="section-header-dropdown-label">Select Dates</span>
+                    <div class="section-header-dropdown">
+                        <select class="section-header-select">
+                            <option value="Oct 3 - Oct 9">Oct 5 - Oct 12</option>
+                            <option value="Oct 3 - Oct 9">Oct 13 - Oct 19</option>
+                            <option value="Oct 3 - Oct 9">Oct 20 - Oct 26</option>
+                            <option value="Oct 27 - Nov 2" selected>Oct 27 - Nov 2</option>
+                            <option value="Nov 3 - Nov 9">Nov 3 - Nov 9</option>
+                            <option value="Nov 10 - Nov 16">Nov 10 - Nov 16</option>
+                            <option value="Nov 17 - Nov 23">Nov 17 - Nov 23</option>
+                        </select>
+                        <div class="section-header-dropdown-carrot">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="carrot-down"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-header-dropdown-container">
+                    <span class="section-header-dropdown-label">Select Bracket</span>
                     <div class="section-header-dropdown">
                         <select class="section-header-select">
                             <option value="All" selected>All</option>
@@ -683,7 +722,7 @@
                             <option value="Over 48">Over 48</option>
                         </select>
                         <div class="section-header-dropdown-carrot">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="carrot-down"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="carrot-down"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -693,7 +732,7 @@
                 </div>
                 <!-- Filter by Division --- should ONLY be active if Age Group selected in dropdown --need to add this functionality still -->
                 <div class="section-header-dropdown-container">
-                    <span class="section-header-dropdown-label">Filter by Division</span>
+                    <span class="section-header-dropdown-label">Select Division</span>
                     <div class="section-header-dropdown">
                         <select class="section-header-select" disabled>
                             <option value="All" selected>All</option>
@@ -701,7 +740,7 @@
                             <option value="Over 40">1 South</option>
                         </select>
                         <div class="section-header-dropdown-carrot">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="carrot-down"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="carrot-down"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -710,46 +749,28 @@
                     </div>
                 </div>
             </div>
-            <div class="date-selection">
-            <div class="date-chevrons">
-                <svg xmlns="http://www.w3.org/2000/svg" class="date-chevron date-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                </svg>
-            </div>
-            <div class="dates">
-                <div class="date">
-                    <span>SUN</span>
-                    <span>Oct 5</span>
+            <!-- <div class="section-header-dropdown-container">
+                <span class="section-header-dropdown-label">Select Dates</span>
+                <div class="date-container date-week-selector">
+                    <div class="date-chevrons">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="date-chevron date-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                    </div>
+                    <span class="date-week-text">Oct 27 - Nov 2</span>
+                    <div class="date-chevrons">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="date-chevron date-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="date">
-                    <span>SUN</span>
-                    <span>Oct 12</span>
-                </div>
-                <div class="date date-active">
-                    <span>SUN</span>
-                    <span>Oct 19</span>
-                </div>
-                <div class="date">
-                    <span>SUN</span>
-                    <span>Oct 26</span>
-                </div>
-                <div class="date">
-                    <span>SUN</span>
-                    <span>Nov 2</span>
-                </div>
-            </div>
-            <div class="date-chevrons flex">
-                <svg xmlns="http://www.w3.org/2000/svg" class="date-chevron date-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                </svg>
-            </div>
-        </div>
+            </div> -->
         </section>
 
         <!-- Section contains all games for given date - each date has it's own section -->
         <section class="section-container">
             <div class="age-group-standings-container">
-                <h3 class="age-group-standings-header">Sunday, October 19th</h3>
+                <h3 class="age-group-standings-header">Sunday, November 2nd</h3>
             </div>
             <div class="match-list-container">
                 <h4 class="division-standings-header">Over 30 - 1 North</h4>
@@ -760,7 +781,12 @@
                             <div class="match-general-info">
                                 <div class="match-status">
                                     <span>FT</span>
-                                    <span class="match-status-official">Official Result</span>
+                                    <div class="match-status-update">
+                                        <span class="match-status-official">Official</span> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-yes" viewBox="0 0 16 16">
+                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="match-teams">
                                     <div class="match-team">
@@ -797,11 +823,12 @@
                                     </svg>
                                     <a class="match-location-link" href="#">Foss Park Somerville MA (turf)</a>
                                 </div>
+                                
                             </div>
                             <div class="match-more-details">
                                 <div class="match-details-btns">
-                                    <a href="#" class="match-more-info-link">Match details</a>
-                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match Details</a>
+                                    <button class="edit-game-btn">Edit Match Details</button>
                                 </div>
                             </div>
                         </div>
@@ -861,7 +888,12 @@
                             <div class="match-general-info">
                                 <div class="match-status">
                                     <span>FT-PENS</span>
-                                    <span class="match-status-official">Official Result</span>
+                                    <div class="match-status-update">
+                                        <span class="match-status-official">Official</span> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-yes" viewBox="0 0 16 16">
+                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="match-teams">
                                     <div class="match-team">
@@ -906,7 +938,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="match">
+                    <!-- <li class="match">
                         <div class="section-announcement-container">
                             <div class="section-announcement-icon-container">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
@@ -916,7 +948,7 @@
                             </div>
                             <h4 class="section-announcement-text">Groton House FC Team BBQ @ 7:00 PM</h4>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="match">
                         <div class="match-details">
                             <div class="match-general-info">
@@ -953,7 +985,7 @@
                                     </svg>
                                     <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
                                 </div>
-                                <div class="match-avail-container">
+                                <!-- <div class="match-avail-container">
                                     <p class="match-avail-text">Will you be at this game?</p>
                                     <div class="match-avail-btns-container">
                                         <button class="match-avail-btn match-avail-btn-yes">
@@ -975,7 +1007,7 @@
                                             <span class="match-avail-btn-text">No</span>
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="match-more-details">
                                 <div class="match-details-btns">
@@ -1018,7 +1050,6 @@
                             <div class="match-general-info">
                                 <div class="match-status">
                                     <span>FT</span>
-                                    <span class="match-status-official">Official Result</span>
                                 </div>
                                 <div class="match-teams">
                                     <div class="match-team">
@@ -1071,7 +1102,7 @@
         <!-- Section contains all games for given date - each date has it's own section -->
         <section class="section-container">
             <div class="age-group-standings-container">
-                <h3 class="age-group-standings-header">Sunday, April 13th</h3>
+                <h3 class="age-group-standings-header">Sunday, November 9th</h3>
             </div>
             <div class="match-list-container">
                 <h4 class="division-standings-header">Over 30 - 1 North</h4>
@@ -1081,157 +1112,6 @@
                         <div class="match-details">
                             <div class="match-general-info">
                                 <div class="match-status">
-                                    <span>FT</span>
-                                    <span class="match-status-official">Official Result</span>
-                                </div>
-                                <div class="match-teams">
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/lp.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Irish Village</a>
-                                        <span class="match-team-score">4</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
-                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/mc.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">CDF Azzurri</a>
-                                        <span class="match-team-score match-team-score-loss">1</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-locations-notes">
-                                <div class="match-location">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                        class="match-details-icon">
-                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                        <path d="M3 9h3v6h-3z"></path>
-                                        <path d="M18 9h3v6h-3z"></path>
-                                        <path
-                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                        </path>
-                                        <path d="M12 5l0 14"></path>
-                                    </svg>
-                                    <a class="match-location-link" href="#">Foss Park Somerville MA (turf)</a>
-                                </div>
-                            </div>
-                            <div class="match-more-details">
-                                <div class="match-details-btns">
-                                    <a href="#" class="match-more-info-link">Match details</a>
-                                    <button class="edit-game-btn">Edit match details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-general-info">
-                                <div class="match-status">
-                                    <span>FT-OT</span>
-                                </div>
-                                <div class="match-teams">
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/chelsea.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Meadowlark FC</a>
-                                        <span class="match-team-score match-team-score-loss">2</span>
-                                    </div>
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/arsenal.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Kendall Wanderers</a>
-                                        <span class="match-team-score">3</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
-                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-locations-notes">
-                                <div class="match-location">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                        class="match-details-icon">
-                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                        <path d="M3 9h3v6h-3z"></path>
-                                        <path d="M18 9h3v6h-3z"></path>
-                                        <path
-                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                        </path>
-                                        <path d="M12 5l0 14"></path>
-                                    </svg>
-                                    <a class="match-location-link" href="#">HYSA Fields at Marshall Street -- Field M2 Holliston MA (turf)</a>
-                                </div>
-                            </div>
-                            <div class="match-more-details">
-                                <div class="match-details-btns">
-                                    <a href="#" class="match-more-info-link">Match details</a>
-                                    <button class="edit-game-btn">Edit match details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-general-info">
-                                <div class="match-status">
-                                    <span>FT-PENS</span>
-                                    <span class="match-status-official">Official Result</span>
-                                </div>
-                                <div class="match-teams">
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/villa.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Eastern FC</a>
-                                        <span class="match-team-score">1 (3)</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
-                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/nc.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Loco Gunners</a>
-                                        <span class="match-team-score match-team-score-loss">1 (1)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-locations-notes">
-                                <div class="match-location">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                        class="match-details-icon">
-                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                        <path d="M3 9h3v6h-3z"></path>
-                                        <path d="M18 9h3v6h-3z"></path>
-                                        <path
-                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                        </path>
-                                        <path d="M12 5l0 14"></path>
-                                    </svg>
-                                    <a class="match-location-link" href="#">Malden Catholic High School Malden MA (turf)</a>
-                                </div>
-                            </div>
-                            <div class="match-more-details">
-                                <div class="match-details-btns">
-                                    <a href="#" class="match-more-info-link">Match details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-general-info">
-                                <div class="match-status">
                                     <span>9:00 AM</span>
                                 </div>
                                 <div class="match-teams">
@@ -1264,29 +1144,7 @@
                                     </svg>
                                     <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
                                 </div>
-                                <div class="match-avail-container">
-                                    <p class="match-avail-text">Will you be at this game?</p>
-                                    <div class="match-avail-btns-container">
-                                        <button class="match-avail-btn match-avail-btn-yes match-avail-yes-select">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-yes" viewBox="0 0 16 16">
-                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-                                        </svg>
-                                        <span class="match-avail-btn-text">Yes</span>
-                                        </button>
-                                        <button class="match-avail-btn match-avail-btn-maybe">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-question" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14"/>
-                                            </svg>
-                                            <span class="match-avail-btn-text">Maybe</span>    
-                                        </button>
-                                        <button class="match-avail-btn match-avail-btn-no">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-no" viewBox="0 0 16 16">
-                                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                                            </svg>
-                                            <span class="match-avail-btn-text">No</span>
-                                        </button>
-                                    </div>
-                                </div>
+                                <button class="avail-btn">Set Availability</button>
                             </div>
                             <div class="match-more-details">
                                 <div class="match-details-btns">
@@ -1295,143 +1153,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-general-info">
-                                <div class="match-status">
-                                    <span>9:00 AM</span>
-                                </div>
-                                <div class="match-teams">
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/nf.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Groton House FC</a>
-                                    </div>
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/bha.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">MORAIS FC</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-locations-notes">
-                                <div class="match-location">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                        class="match-details-icon">
-                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                        <path d="M3 9h3v6h-3z"></path>
-                                        <path d="M18 9h3v6h-3z"></path>
-                                        <path
-                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                        </path>
-                                        <path d="M12 5l0 14"></path>
-                                    </svg>
-                                    <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
-                                </div>
-                                <div class="match-avail-container">
-                                    <p class="match-avail-text">Will you be at this game?</p>
-                                    <div class="match-avail-btns-container">
-                                        <button class="match-avail-btn match-avail-btn-yes">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-yes" viewBox="0 0 16 16">
-                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-                                        </svg>
-                                        <span class="match-avail-btn-text">Yes</span>
-                                        </button>
-                                        <button class="match-avail-btn match-avail-btn-maybe match-avail-maybe-select">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-question" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14"/>
-                                            </svg>
-                                            <span class="match-avail-btn-text">Maybe</span>    
-                                        </button>
-                                        <button class="match-avail-btn match-avail-btn-no">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-no" viewBox="0 0 16 16">
-                                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                                            </svg>
-                                            <span class="match-avail-btn-text">No</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-more-details">
-                                <div class="match-details-btns">
-                                    <a href="#" class="match-more-info-link">Match details</a>
-                                    <button class="edit-game-btn">Edit match details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-general-info">
-                                <div class="match-status">
-                                    <span>9:00 AM</span>
-                                </div>
-                                <div class="match-teams">
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/nf.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">Groton House FC</a>
-                                    </div>
-                                    <div class="match-team">
-                                        <a href="#" class="match-team-logo-link">
-                                            <img src="images/bha.png" alt="team logo" class="match-team-logo">
-                                        </a>
-                                        <a href="#" class="match-team-name">MORAIS FC</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-locations-notes">
-                                <div class="match-location">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                        class="match-details-icon">
-                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                        <path d="M3 9h3v6h-3z"></path>
-                                        <path d="M18 9h3v6h-3z"></path>
-                                        <path
-                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                        </path>
-                                        <path d="M12 5l0 14"></path>
-                                    </svg>
-                                    <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
-                                </div>
-                                <div class="match-avail-container">
-                                    <p class="match-avail-text">Will you be at this game?</p>
-                                    <div class="match-avail-btns-container">
-                                        <button class="match-avail-btn match-avail-btn-yes">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-yes" viewBox="0 0 16 16">
-                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-                                        </svg>
-                                        <span class="match-avail-btn-text">Yes</span>
-                                        </button>
-                                        <button class="match-avail-btn match-avail-btn-maybe">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-question" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14"/>
-                                            </svg>
-                                            <span class="match-avail-btn-text">Maybe</span>    
-                                        </button>
-                                        <button class="match-avail-btn match-avail-btn-no  match-avail-no-select">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="match-avail-icon match-avail-no" viewBox="0 0 16 16">
-                                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                                            </svg>
-                                            <span class="match-avail-btn-text">No</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="match-more-details">
-                                <div class="match-details-btns">
-                                    <a href="#" class="match-more-info-link">Match details</a>
-                                    <button class="edit-game-btn">Edit match details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    </li>    
                 </ul>
             </div>
             <div class="match-list-container">
@@ -1442,7 +1164,6 @@
                             <div class="match-general-info">
                                 <div class="match-status">
                                     <span>FT</span>
-                                    <span class="match-status-official">Official Result</span>
                                 </div>
                                 <div class="match-teams">
                                     <div class="match-team">
@@ -1492,8 +1213,29 @@
             </div>
         </section>
     </main>
+    <div class="avail-module">
+        <button class="avail-module-x">&times;</button>
+        <form action="#" class="avail-module-form">
+            <label for="available" class="avail-radio-wrapper avail-radio-wrapper-yes">
+                <input type="radio" name="availability" id="available" value="available">
+
+                <span class="avail-form-option">Available</span>
+            </label>
+            <label for="maybe" class="avail-radio-wrapper avail-radio-wrapper-maybe">
+                <input type="radio" name="availability" id="maybe" value="maybe">
+                <span class="avail-form-option">Maybe</span>
+            </label>
+            <label for="unavailable" class="avail-radio-wrapper avail-radio-wrapper-no">
+                <input type="radio" name="availability" id="unavailable" value="unavailable">
+                <span class="avail-form-option">Unavailable</span>
+            </label>
+            <textarea name="availTextArea" id="availTextArea" class="avail-textarea" placeholder="Enter your message..."></textarea>
+            <button class="avail-module-submit avail-btn">Submit</button>
+        </form>
+    </div>
     <script src="othsl-mock.js"></script>
     <script src="formDrawer.js"></script>
+    <script src="demoONLY.js"></script>
 </body>
 
 </html>
