@@ -2433,3 +2433,121 @@ Availability Module
     border: 1px solid #ccc;
     resize: none;
 }
+
+/* ====== 
+ROSTER CSS
+======= */
+
+.rosters-container {
+    display: flex;
+    gap: 1em;
+}
+
+.roster {
+    flex-grow: 1;
+}
+
+.roster-header {
+    margin: .75em 0;
+}
+
+.roster-team-logo {
+    width: 2.5em;
+    margin-right: .25em;
+}
+
+.roster-team-name {
+    display: flex;
+    align-items: center;
+    font-size: .875rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.roster-list {
+    width: 100%;
+    table-layout: fixed;
+    font-size: .875rem;
+}
+
+.roster-table-col-1 {
+    width: 25%;
+}
+
+.roster-table-col-2 {
+    width: 50%;
+}
+
+.roster-table-header,
+.roster-player-number,
+.roster-player-attendance {
+    text-align: center;
+}
+
+.roster-list tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.roster-player-header,
+.roster-player {
+    text-align: left;
+}
+
+.roster-table-header {
+    padding-left: .25em;
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.roster-player {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .5em .25em;
+}
+
+.roster-player-placeholder {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-right: .25em;
+    font-size: .7rem;
+    letter-spacing: .25px;
+    color: white;
+    background-color: #c7c7cc;
+    border-radius: 50%;
+}
+
+.table-icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.table-attendance-yes {
+    background-color: #1edc6a;
+}
+
+.table-attendance-no {
+    background-color: #ff0000;
+}
+
+.table-attendance-maybe {
+    background-color: #8e8e93;
+}
+
+.table-icon {
+    width: 20px;
+    fill: white;
+}
+
+@media (max-width:500px) {
+    .rosters-container {
+        flex-direction: column;
+    }
+}
