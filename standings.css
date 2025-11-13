@@ -2357,6 +2357,7 @@ Availability Module
 
 .avail-module-active {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -2370,18 +2371,35 @@ Availability Module
     cursor: pointer;
 }
 
-.avail-module-form {
+
+
+.avail-module-form,
+.avail-module-game-details {
     width: 100%;
     max-width: 32em;
     padding: 1em;
     font-family: "Roboto", sans-serif;
 }
 
+.avail-module-prompt {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-bottom: .5em;
+}
+
+.avail-radio-group {
+    display: flex;
+    gap: 1em;
+    border: none;
+}
+
 .avail-radio-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .5em;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 2.25em;
     position: relative;
     margin-bottom: 1em;
     text-align: center;
@@ -2404,13 +2422,73 @@ Availability Module
 }
 
 .avail-form-option {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
+    /* width: 100%;
+    height: 100%; */
+    padding: 0 .25em;
 }
 
-.avail-radio-wrapper-yes input[type="radio"]:checked + .avail-form-option {
-    background-color: #d1e7dc;
+.avail-form-icon {
+    width: 1.75em;
+}
+
+.avail-form-icon-yes {
+    fill: #1edc6a;
+}
+
+.avail-form-icon-no {
+    fill: #ff0000;
+}
+
+.avail-form-icon-maybe {
+    fill: #8e8e93;
+}
+
+.avail-radio-wrapper-yes:hover {
+    background-color: #E8FBF0;
+}
+
+.avail-radio-wrapper-no:hover {
+    background-color: #ffe5e5;
+}
+
+.avail-radio-wrapper-maybe:hover {
+    background-color: #f3f3f4;
+}
+
+.avail-radio-wrapper-yes:has(input[type="radio"]:checked) {
+    background-color: #1edc6a;
+}
+
+.avail-radio-wrapper-yes:has(input[type="radio"]:checked) .avail-form-option {
+    color: rgba(31 31 31 / 1);
+}
+
+.avail-radio-wrapper-yes:has(input[type="radio"]:checked) .avail-form-icon-yes {
+    fill: rgba(31 31 31 / 1);;
+}
+
+.avail-radio-wrapper-no:has(input[type="radio"]:checked) {
+    background-color: #ff0000;
+}
+
+.avail-radio-wrapper-no:has(input[type="radio"]:checked) .avail-form-option {
+    color: rgba(31 31 31 / 1);
+}
+
+.avail-radio-wrapper-no:has(input[type="radio"]:checked) .avail-form-icon-no {
+    fill: rgba(31 31 31 / 1);;
+}
+
+.avail-radio-wrapper-maybe:has(input[type="radio"]:checked) {
+    background-color: #8e8e93;
+}
+
+.avail-radio-wrapper-maybe:has(input[type="radio"]:checked) .avail-form-option {
+    color: rgba(31 31 31 / 1);
+}
+
+.avail-radio-wrapper-maybe:has(input[type="radio"]:checked) .avail-form-icon-maybe {
+    fill: rgba(31 31 31 / 1);;
 }
 
 .avail-radio-wrapper-maybe input[type="radio"]:checked + .avail-form-option {
