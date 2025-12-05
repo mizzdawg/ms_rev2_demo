@@ -904,6 +904,7 @@ Page Filtering Styles
 
 .edit-game-btn,
 .match-more-info-link,
+.match-roster-link,
 .avail-btn {
     padding: 8px 18px;
     font-family: "Roboto", sans-serif;
@@ -916,20 +917,21 @@ Page Filtering Styles
     transition: background-color 150ms linear;
 }
 
-.avail-btn {
+.avail-btn,
+.match-roster-link {
     margin-top: .5em;
     color: #ffffff;
     background-color: #006EE5;
 }
 
 .avail-btn:hover,
-.avail-btn:active {
+.avail-btn:active,
+.match-roster-link:hover,
+.match-roster-link:active {
     background-color: #0063ce;
 }
 
 .edit-game-btn {
-    /* color: rgb(12,16,20); */
-    /* background: rgb(239,239,239); */
     color: #FFFFFF;
     background-color: #6C757D;
 }
@@ -939,27 +941,16 @@ Page Filtering Styles
     background-color: #5A6268;
 }
 
-/* .edit-game-btn:hover {
-    background-color: rgb(231, 234, 238);
-} */
-
-/* .edit-game-btn:active {
-    color: rgba(12 16 20 / .75);
-    background-color: rgb(231, 234, 238);
-    transform: scale(.98);
-} */
 
 .match-more-info-link {
     margin-bottom: .5em;
     color: #007BFF;
-    /* background: rgb(74, 93, 249); */
     border: 1px solid #007BFF;
 }
 
 .match-more-info-link:hover,
 .match-more-info-link:focus,
 .match-more-info-link:active {
-    /* background: rgb(65, 80, 247); */
     background-color: #f6f9fc;
 }
 
@@ -2548,6 +2539,11 @@ ROSTER CSS
     font-size: .875rem;
 }
 
+.roster-list tbody,
+.roster-list thead {
+    border-bottom: 1px solid rgba(235 233 233 / 1);
+}
+
 .roster-table-col-1 {
     width: 25%;
 }
@@ -2598,15 +2594,6 @@ ROSTER CSS
     border-radius: 50%;
 }
 
-.table-icon-container {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-}
-
 .table-attendance-yes {
     background-color: #1edc6a;
 }
@@ -2616,12 +2603,53 @@ ROSTER CSS
 }
 
 .table-attendance-maybe {
-    background-color: #8e8e93;
+    background-color: #8E8E93;
 }
 
 .table-icon {
-    width: 20px;
-    fill: white;
+    width: 25px;
+}
+
+.attendance-icon-yes {
+    fill: #1edc6a;
+}
+
+.table-icon-susp,
+.attendance-icon-no {
+    fill: #ff0000;
+}
+
+.attendance-icon-maybe {
+    fill: #E6A100;
+}
+
+.attendance-icon-pending {
+    fill: #8E8E93;
+}
+
+.roster-list-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .75em;
+}
+
+.attendance-totals {
+    display: flex;
+    gap: .5em;
+}
+
+.attendance-total-summary {
+    display: flex;
+    align-items: center;
+    gap: .15em;
+    padding: 4px 8px;
+    border: 1px solid rgba(235 233 233 / 1);
+    border-radius: 5px;
+}
+
+.attendance-total-text {
+    font-size: .75rem;
+    font-weight: 800;
 }
 
 @media (max-width:500px) {
