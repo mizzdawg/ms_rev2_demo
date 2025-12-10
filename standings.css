@@ -32,7 +32,7 @@ main {
 .split-container-main {
     padding: 20px;
     background-color: rgba(255 255 255 / 1);
-    border-radius: 4px;
+    border-radius: 16px;
 }
 
 .split-container-remainder {
@@ -903,8 +903,8 @@ Page Filtering Styles
 }
 
 .edit-game-btn,
+.btn-edit,
 .match-more-info-link,
-.match-roster-link,
 .avail-btn {
     padding: 8px 18px;
     font-family: "Roboto", sans-serif;
@@ -912,32 +912,45 @@ Page Filtering Styles
     font-weight: 600;
     line-height: 1;
     letter-spacing: .5px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 150ms linear;
 }
 
-.avail-btn,
-.match-roster-link {
+.btn-edit-table {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin-left: 1em;
+    font-size: .875rem;
+    padding: 6px 14px;
+}
+
+.btn-icon-table {
+    width: 12px;
+}
+
+.avail-btn {
     margin-top: .5em;
     color: #ffffff;
     background-color: #006EE5;
 }
 
 .avail-btn:hover,
-.avail-btn:active,
-.match-roster-link:hover,
-.match-roster-link:active {
+.avail-btn:active {
     background-color: #0063ce;
 }
 
-.edit-game-btn {
+.edit-game-btn,
+.btn-edit {
     color: #FFFFFF;
     background-color: #6C757D;
 }
 
 .edit-game-btn:hover,
-.edit-game-btn:active {
+.edit-game-btn:active,
+.btn-edit:hover,
+.btn-edit:active {
     background-color: #5A6268;
 }
 
@@ -2399,7 +2412,7 @@ Availability Module
     font-weight: 600;
     line-height: 1;
     letter-spacing: .5px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     background-color: #fff;
     transition: background-color 150ms linear;
@@ -2427,60 +2440,78 @@ Availability Module
 }
 
 .avail-form-icon-no {
-    fill: #ff0000;
+    fill: #ff0000
 }
 
 .avail-form-icon-maybe {
-    fill: #8e8e93;
+    fill: #E6A100;
 }
 
 .avail-radio-wrapper-yes:hover {
-    background-color: #E8FBF0;
+    background-color: #e8fbf0;
+}
+
+.avail-radio-wrapper-yes:active {
+    background-color: #78eaa5;
+    border: 1px solid green;
 }
 
 .avail-radio-wrapper-no:hover {
     background-color: #ffe5e5;
 }
 
+.avail-radio-wrapper-no:active {
+    background-color: #ff7f7f;
+    border: 1px solid #b20000;
+}
+
 .avail-radio-wrapper-maybe:hover {
-    background-color: #f3f3f4;
+    background-color: #fcf5e5;
+}
+
+.avail-radio-wrapper-maybe:active {
+    background-color: #f5d999;
+    border: 1px solid #e8aa19;
 }
 
 .avail-radio-wrapper-yes:has(input[type="radio"]:checked) {
-    background-color: #1edc6a;
+    background-color: #c1f5d6;
+    border: 1px solid green;
 }
 
-.avail-radio-wrapper-yes:has(input[type="radio"]:checked) .avail-form-option {
+/* .avail-radio-wrapper-yes:has(input[type="radio"]:checked) .avail-form-option {
     color: rgba(31 31 31 / 1);
-}
+} */
 
-.avail-radio-wrapper-yes:has(input[type="radio"]:checked) .avail-form-icon-yes {
+/* .avail-radio-wrapper-yes:has(input[type="radio"]:checked) .avail-form-icon-yes {
     fill: rgba(31 31 31 / 1);;
-}
+} */
 
 .avail-radio-wrapper-no:has(input[type="radio"]:checked) {
-    background-color: #ff0000;
+    background-color: #ffcccc;
+    border: 1px solid #b20000;
 }
 
-.avail-radio-wrapper-no:has(input[type="radio"]:checked) .avail-form-option {
+/* .avail-radio-wrapper-no:has(input[type="radio"]:checked) .avail-form-option {
     color: rgba(31 31 31 / 1);
 }
 
 .avail-radio-wrapper-no:has(input[type="radio"]:checked) .avail-form-icon-no {
     fill: rgba(31 31 31 / 1);;
-}
+} */
 
 .avail-radio-wrapper-maybe:has(input[type="radio"]:checked) {
-    background-color: #8e8e93;
+    background-color: #faeccc;
+    border: 1px solid #e8aa19;
 }
 
-.avail-radio-wrapper-maybe:has(input[type="radio"]:checked) .avail-form-option {
+/* .avail-radio-wrapper-maybe:has(input[type="radio"]:checked) .avail-form-option {
     color: rgba(31 31 31 / 1);
 }
 
 .avail-radio-wrapper-maybe:has(input[type="radio"]:checked) .avail-form-icon-maybe {
     fill: rgba(31 31 31 / 1);;
-}
+} */
 
 .avail-radio-wrapper-maybe input[type="radio"]:checked + .avail-form-option {
     background-color: #ccddef;
@@ -2509,7 +2540,7 @@ ROSTER CSS
 
 .rosters-container {
     display: flex;
-    gap: 1em;
+    gap: 1.75em;
 }
 
 .roster {
@@ -2517,7 +2548,7 @@ ROSTER CSS
 }
 
 .roster-header {
-    margin: .75em 0;
+    margin: 1em 0;
 }
 
 .roster-team-logo {
@@ -2552,25 +2583,21 @@ ROSTER CSS
     width: 50%;
 }
 
-.roster-table-header,
-.roster-player-number,
-.roster-player-attendance {
-    text-align: center;
-}
-
-.roster-list tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-.roster-player-header,
-.roster-player {
-    text-align: left;
-}
 
 .roster-table-header {
     padding-left: .25em;
     font-size: .75rem;
     text-transform: uppercase;
+    text-align: left;
+}
+
+.roster-table-header-number {
+    text-align: right;
+    padding-right: .75em;
+}
+
+.roster-list tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
 .roster-player {
@@ -2594,6 +2621,21 @@ ROSTER CSS
     border-radius: 50%;
 }
 
+.roster-player-self {
+    background-color: rgba(255, 206, 7, .12);
+    border: 1px solid rgba(255, 206, 7, .4);
+}
+
+.roster-player-number {
+    text-align: right;
+    padding-right: .75em;
+}
+
+.roster-table-center-align {
+    display: flex;
+    align-items: center;
+}
+
 .table-attendance-yes {
     background-color: #1edc6a;
 }
@@ -2607,7 +2649,7 @@ ROSTER CSS
 }
 
 .table-icon {
-    width: 25px;
+    width: 20px;
 }
 
 .attendance-icon-yes {
@@ -2630,26 +2672,41 @@ ROSTER CSS
 .roster-list-details {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: .75em;
 }
 
 .attendance-totals {
     display: flex;
-    gap: .5em;
+    gap: .25em;
 }
 
 .attendance-total-summary {
     display: flex;
     align-items: center;
-    gap: .15em;
-    padding: 4px 8px;
+    gap: .5em;
+    padding: 4px 10px;
     border: 1px solid rgba(235 233 233 / 1);
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 .attendance-total-text {
-    font-size: .75rem;
+    font-size: .875rem;
     font-weight: 800;
+}
+
+@media (max-width:768px) {
+    .roster-list-details {
+        flex-direction: column;
+    }
+
+    .attendance-totals {
+        order: 1;
+    }
+
+    .roster-link-container {
+        order: 2;
+    }
 }
 
 @media (max-width:500px) {
