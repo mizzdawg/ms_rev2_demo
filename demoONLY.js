@@ -1,26 +1,23 @@
-const availBtn = document.querySelector('.avail-btn');
-const availModule = document.querySelector('.avail-module');
-const availModileX = document.querySelector('.avail-module-x');
-const availFormBtn = document.querySelector('.avail-module-submit');
-const gameDetailAvailBtn = document.querySelector('.btn-edit-table')
+document.addEventListener('click', (e) => {
+    const trigger = e.target.closest(
+        '.avail-btn, .avail-module-x, .avail-module-submit, .btn-edit-table'
+    );
 
+    if (trigger) {
+        const moduleId =
+            trigger.dataset.moduleId ||
+            trigger.closest('.avail-module')?.dataset.moduleId;
 
-availBtn.addEventListener('click', () => {
-    toggleAvailModule();
+        if(!moduleId) return;
+
+        const module = document.querySelector(
+            `.avail-module[data-module-id="${moduleId}"]`
+        );
+
+        if (!module) return;
+
+        module.classList.toggle('avail-module-active');
+    }
+
 })
 
-availModileX.addEventListener('click', () => {
-    toggleAvailModule();
-})
-
-availFormBtn.addEventListener('click', () => {
-    toggleAvailModule();
-})
-
-gameDetailAvailBtn.addEventListener('click', () => {
-    toggleAvailModule();
-})
-
-function toggleAvailModule() {
-    availModule.classList.toggle('avail-module-active')
-}

@@ -121,7 +121,7 @@ Page Filtering Styles
 } */
 
 .section-header-dropdown-label {
-    color: rgba(31, 31, 31 / 1);
+    color: rgb(72 73 74);
     font-family: 'Roboto', sans-serif;
     font-size: .75rem;
     line-height: 20px;
@@ -155,13 +155,13 @@ Page Filtering Styles
     appearance: none;
     width: 100%;
     padding: .75em 2em .5em .5em;
-    color: rgb(31, 31, 31);
+    color: rgb(72 73 74);
     font-size: .875rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     text-overflow: ellipsis;
     cursor: pointer;
-    border: 1px solid rgb(31 31 31);
+    border: 1px solid rgb(72 73 74);
     border-radius: 4px;
 }
 
@@ -777,7 +777,7 @@ Page Filtering Styles
 }
 
 .match-team-score-loss {
-    color: #6c6d6f;
+    color: #98989a;
 }
 
 .match-caret {
@@ -2576,11 +2576,15 @@ ROSTER CSS
 }
 
 .roster-table-col-1 {
-    width: 25%;
+    width: 45%;
 }
 
 .roster-table-col-2 {
-    width: 50%;
+    width: 45%;
+}
+
+.roster-table-col-3 {
+    width: 10%;
 }
 
 
@@ -2669,16 +2673,15 @@ ROSTER CSS
     fill: #8E8E93;
 }
 
-.roster-list-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: .75em;
-}
-
 .attendance-totals {
     display: flex;
+    align-items: center;
     gap: .25em;
+    margin: 1em 0;
+}
+
+.attendance-totals span {
+    margin-right: 1em;
 }
 
 .attendance-total-summary {
@@ -2690,27 +2693,59 @@ ROSTER CSS
     border-radius: 30px;
 }
 
-.attendance-total-text {
+.attendance-total-text,
+.attendance-totals span {
     font-size: .875rem;
     font-weight: 800;
 }
 
+.roster-list-actions {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.roster-list-link,
+.roster-list-actions-btn {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
 @media (max-width:768px) {
-    .roster-list-details {
+    .rosters-container {
         flex-direction: column;
     }
 
-    .attendance-totals {
-        order: 1;
-    }
-
-    .roster-link-container {
-        order: 2;
+    .btn-edit-table-text {
+        display: none;
     }
 }
 
-@media (max-width:500px) {
-    .rosters-container {
+@media (max-width:550px) {
+    .attendance-totals span {
+        margin-right: .25em;
+    }
+
+    .attendance-total-summary {
+        gap: .25em;
+        padding: 4px;
+    }
+
+    .attendance-total-text,
+    .attendance-totals span {
+        font-size: .75rem;
+    }
+    
+    .roster-list-actions {
         flex-direction: column;
+    }
+
+    .roster-list-link,
+    .roster-list-actions-btn {
+        width: 100%;
     }
 }

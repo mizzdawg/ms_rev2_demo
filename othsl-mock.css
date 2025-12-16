@@ -447,7 +447,7 @@ svg.acct-icon-solid {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 17px;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #0D274C;
     color: white;
     cursor: pointer;
@@ -465,15 +465,16 @@ svg.acct-icon-solid {
 
 .upcoming-matchup-sub-item {
     background-color: #F4F6F5;
-    border-radius: 5px;
+    border-radius: 15px;
+    margin-bottom: .75em;
 }
 
 .nav-menu-upcoming-games {
     width: 100%;
-    padding-top: 4px;
-    padding-right: 16px;
-    padding-bottom: 4px;
-    padding-left: 16px;
+    padding: .75em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #45585e;   
 }
 
 .nav-menu-upcoming-games-detail {
@@ -484,8 +485,7 @@ svg.acct-icon-solid {
 
 .nav-menu-upcoming-games-status span,
 .nav-menu-upcoming-games-date span {
-    font-size: 14px;
-    color: rgba(87 111 118 / 1);
+    font-size: 14px; 
 }
 
 .nav-menu-upcoming-games-status {
@@ -539,7 +539,58 @@ svg.acct-icon-solid {
     text-decoration: underline;
 }
 
+.nav-menu-upcoming-games-attendance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .75em;
+    padding: .5em;
+    background-color: #fff;
+    border-radius: 30px;
+}
 
+.nav-menu-upcoming-games-attendance-text {
+    display: flex;
+    align-items: center;
+    gap: .25em;
+}
+
+.nav-menu-upcoming-games-attendence-answer,
+.nav-menu-upcoming-games-edit-attendence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .125em;
+    background: none;
+    border: 1px solid #DBDDDC;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.nav-menu-upcoming-games-attendence-answer:hover,
+.nav-menu-upcoming-games-edit-attendence:hover {
+    background-color: #f4f6f5;    
+}
+
+.nav-menu-upcoming-games-attendence-answer:active,
+.nav-menu-upcoming-games-edit-attendence:active {
+    background-color: #dbdddc;
+}
+
+.nav-menu-upcoming-games-attendence-answered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu-upcoming-games-edit-attendence {
+    padding: .37em;
+}
+
+.nav-menu-upcoming-games-edit-icon {
+    width: 1.25em;
+    fill: #6C757D;
+}
 
 .nav-menu-logout-link {
     display: flex;

@@ -34,7 +34,7 @@ const rightNavX = document.querySelector('.acct-menu-x-icon')
 const navOverlay = document.querySelector('.nav-pop-menu-overlay')
 
 // Toggle Logged In vs Logged Out for Top Nav - DEMO ONLY 
-let isLoggedIn = false;
+let isLoggedIn = true;
 const loggedOutDisplay = document.querySelector('.nav-log-in-container')
 
 if(isLoggedIn) {
