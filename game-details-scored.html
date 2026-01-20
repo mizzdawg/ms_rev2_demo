@@ -295,29 +295,33 @@
                 <div class="game-detail-matchup-team-container">
                     <a href="#" class="game-detail-matchup-team">
                         <div class="game-detail-matchup-team-info">
-                            <h2 class="game-detail-matchup-team-name">Eastern FC</h2>
+                            <h2 class="game-detail-matchup-team-name">Concord United</h2>
                         </div>
                         <div class="game-detail-matchup-team-logo">
-                            <img src="images/villa.png" alt="team logo">
+                            <img src="images/stand_logo_2.jpg" alt="team logo">
                         </div>
                     </a>
-                    <span class="game-detail-score">4</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="game-detail-match-caret" viewBox="0 0 8 16">
-                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                    </svg>
+                    <div class="game-detail-score-container">
+                        <span class="game-detail-score">4</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="game-detail-match-caret" viewBox="0 0 8 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="game-detail-matchup-info">
                     <span class="game-detail-matchup-end-label">FT</span>
                 </div>
                 <!-- Should link to team this link contains info on -->
                  <div class="game-detail-matchup-team-container">
-                    <span class="game-detail-score game-detail-score-loss">3</span>
+                    <div class="game-detail-score-container">
+                        <span class="game-detail-score game-detail-score-loss">1</span>
+                    </div>
                     <a href="team.html" class="game-detail-matchup-team">
                         <div class="game-detail-matchup-team-logo">
-                            <img src="images/iv_logo.png" alt="team logo">
+                            <img src="images/stand_logo_7.jpeg" alt="team logo">
                         </div>
                         <div class="game-detail-matchup-team-info">
-                            <h2 class="game-detail-matchup-team-name">Irish Village</h2>
+                            <h2 class="game-detail-matchup-team-name">Sporting Club Malden</h2>
                         </div>
                     </a>
                  </div>
@@ -351,14 +355,20 @@
         </section>
         <section class="section-split-container">
             <div class="split-container-main">
-                <div class="game-detail-header">
-                    <h2 class="game-detail-section-header-content">Location</h2>
+                <div class="game-detail-section-header">
+                    <h2 class="game-detail-section-header-content">Game Location</h2>
                 </div>
-                <p class="game-detail-location-field">Foss Park Somerville MA <span
+                <div class="section-info-item">
+                    <span class="section-info-value">Foss Park Somerville MA <span
+                    class="game-detail-location-underline">(turf)</span> - 49
+                    Fellsway W,
+                    Somerville, MA</span>
+                </div>
+                <!-- <p class="game-detail-location-field">Foss Park Somerville MA <span
                     class="game-detail-location-underline">(turf)</span> - 49
                     Fellsway W,
                     Somerville, MA
-                </p>
+                </p> -->
                 <div class="game-detail-map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.722355640539!2d-71.09142492388911!3d42.39106077118995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37084d359498b%3A0x4137687df1e0b676!2s49%20Fellsway%20W%2C%20Somerville%2C%20MA%2002145!5e0!3m2!1sen!2sus!4v1745769150098!5m2!1sen!2sus"
@@ -367,17 +377,21 @@
                 </div>
             </div>
             <div class="split-container-remainder">
-                <div class="game-detail-header">
-                    <h2 class="game-detail-section-header-content">Team Stats</h2>
+                <div class="game-detail-section-header">
+                    <h2 class="game-detail-section-header-content">Season Stats</h2>
                 </div>
                 <div class="game-detail-team-stats-header">
                     <div class="game-detail-team-stats-team">
-                        <img src="images/villa.png" alt="team logo" class="game-detail-team-stats-team-logo">
-                        <p class="game-detail-team-stats-team-name">Eastern FC</p>
+                        <div class="game-detail-section-team-logo">
+                            <img src="images/stand_logo_2.jpg" alt="team logo">
+                        </div>
+                        <p class="game-detail-team-stats-team-name">Concord United</p>
                     </div>
                     <div class="game-detail-team-stats-team">
-                        <img src="images/iv_logo.png" alt="team logo" class="game-detail-team-stats-team-logo">
-                        <p class="game-detail-team-stats-team-name">Irish Village</p>
+                        <div class="game-detail-section-team-logo">
+                            <img src="images/stand_logo_7.jpeg" alt="team logo">
+                        </div>
+                        <p class="game-detail-team-stats-team-name">Sporting Club Malden</p>
                     </div>
                 </div>
                 <div class="game-detail-team-stats-row">
@@ -416,10 +430,444 @@
         <section class="section-container">
             <div class="game-detail-section">
                 <div class="game-detail-section-header">
+                    <h6 class="game-detail-section-header-content">Team Rosters</h6>
+                </div>
+                <div class="rosters-container">
+            <div class="roster">
+                <div class="roster-header">
+                    <a href="#" class="roster-team-name">
+                        <div class="game-detail-section-team-logo">
+                            <img src="images/stand_logo_2.jpg" alt="team logo">
+                        </div>
+                        <span>Concord United</span>
+                    </a>
+                </div>
+                <table class="roster-list">
+                    <thead>
+                        <tr>
+                            <th class="roster-table-header roster-table-col-1">Player</th>
+                            <th class="roster-table-header">Attendance</th>
+                            <th class="roster-table-header roster-table-header-number">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">DM</span>
+                                <span class="roster-player-name">Dustin Murray</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-pending" viewBox="0 0 16 16">
+                                        <title>No Response</title>
+                                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">7</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">AL</span>
+                                <span class="roster-player-name">Anthony Lutz</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">24</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">BU</span>
+                                <span class="roster-player-name">Ben Uche</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-pending" viewBox="0 0 16 16">
+                                        <title>No Response</title>
+                                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">2</td>
+                        </tr>
+                        <tr class="roster-player-self">
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">JW</span>
+                                <span class="roster-player-name">Jason Walters</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>
+                                    <button class="btn btn-edit btn-edit-table"  data-module-id="1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="btn-icon-table" viewBox="0 0 16 16">
+                                            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
+                                        </svg>       
+                                        <span class="btn-edit-table-text">Change</span>
+                                    </button>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">10</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">TR</span>
+                                <span class="roster-player-name">Tyler Ross</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-no" viewBox="0 0 16 16">
+                                        <title>Not Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">18</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">CM</span>
+                                <span class="roster-player-name">Caleb Morgan</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-maybe" viewBox="0 0 16 16">
+                                        <title>Maybe Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">5</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">LS</span>
+                                <span class="roster-player-name">Liam Scott</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">21</td>                            
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">ND</span>
+                                <span class="roster-player-name">Noah Daniels</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-no" viewBox="0 0 16 16">
+                                        <title>Not Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">9</td>                           
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">EM</span>
+                                <span class="roster-player-name">Ethan Moore</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-maybe" viewBox="0 0 16 16">
+                                        <title>Maybe Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                                    </svg>                              
+                              </div>
+                            </td>
+                            <td class="roster-player-number">13</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">GB</span>
+                                <span class="roster-player-name">Grant Barnes</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">6</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">RC</span>
+                                <span class="roster-player-name">Ryan Cooper</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon table-icon-susp" viewBox="0 0 16 16">
+                                        <title>Ineligible</title>
+                                        <path d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">28</td>                            
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">PD</span>
+                                <span class="roster-player-name">Patrick Diaz</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-pending" viewBox="0 0 16 16">
+                                        <title>No Response</title>
+                                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">30</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">HF</span>
+                                <span class="roster-player-name">Henry Fisher</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>                                    
+                                </div>
+                            </td>
+                            <td class="roster-player-number">17</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">PD</span>
+                                <span class="roster-player-name">Patrick Diaz</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>                                    
+                                </div>
+                            </td>
+                            <td class="roster-player-number">30</td>
+                        </tr>
+                        <tr>
+                            <td class="roster-player">
+                                <span class="roster-player-placeholder">HF</span>
+                                <span class="roster-player-name">Henry Fisher</span>
+                            </td>
+                            <td class="roster-player-attendance">
+                                <div class="roster-table-center-align">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                        <title>Attending</title>
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="roster-player-number">17</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="roster-list-details">
+                    <div class="roster-list-actions">
+                        <a href="#" class="match-more-info-link roster-list-link">
+                            <span>
+                                View PDF Roster
+                            </span>
+                        </a>
+                        <button class="avail-btn roster-list-actions-btn" data-module-id="2">Request Responses</button>
+                    </div>
+                    <div class="section-info-block">
+                        <div class="section-info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-yes" viewBox="0 0 16 16">
+                                <title>Attending</title>
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </svg>   
+                            <span class="section-info-label">Attending</span>
+                            <span class="section-info-value">7</span>
+                        </div>
+                        <div class="section-info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-no" viewBox="0 0 16 16">
+                                <title>Not Attending</title>
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                            </svg>
+                            <span class="section-info-label">Not Attending</span>
+                            <span class="section-info-value">2</span>
+                        </div>
+                        <div class="section-info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-maybe" viewBox="0 0 16 16">
+                                <title>Maybe Attending</title>
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                            </svg>  
+                            <span class="section-info-label">Maybe Attending</span>
+                            <span class="section-info-value">2</span>
+                        </div>
+                        <div class="section-info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="table-icon attendance-icon-pending" viewBox="0 0 16 16">
+                                <title>No Response</title>
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                            <span class="section-info-label">No Response</span>
+                            <span class="section-info-value">2</span>
+                        </div>
+                        <div class="section-info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="table-icon table-icon-susp" viewBox="0 0 16 16">
+                                <title>Ineligible</title>
+                                <path d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0"/>
+                            </svg>
+                            <span class="section-info-label">Ineligible</span>
+                            <span class="section-info-value">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roster">
+                <div class="roster-header">
+                    <a href="#" class="roster-team-name">
+                        <div class="game-detail-section-team-logo">
+                            <img src="images/stand_logo_7.jpeg" alt="team logo">
+                        </div>
+                        <span>Sporting Club Malden</span>
+                    </a>
+                </div>
+                    <table class="roster-list">
+                        <thead>
+                            <tr>
+                                <th class="roster-table-header roster-player-header roster-table-col-1">Player</th>
+                                <th class="roster-table-header roster-table-header-number">#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">EJ</span>
+                                    <span class="roster-player-name">Elliot Jackson</span>
+                                </td>
+                                <td class="roster-player-number">6</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">MW</span>
+                                    <span class="roster-player-name">Matt West</span>
+                                </td>
+                                <td class="roster-player-number">16</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">JK</span>
+                                    <span class="roster-player-name">Jeff Kent</span>
+                                </td>
+                                <td class="roster-player-number">12</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">AJ</span>
+                                    <span class="roster-player-name">Alex Johnson</span>
+                                </td>
+                                <td class="roster-player-number">7</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">SR</span>
+                                    <span class="roster-player-name">Sam Reyes</span>
+                                </td>
+                                <td class="roster-player-number">22</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">BL</span>
+                                    <span class="roster-player-name">Brian Lewis</span>
+                                </td>
+                                <td class="roster-player-number">4</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">KT</span>
+                                    <span class="roster-player-name">Karl Thompson</span>
+                                </td>
+                                <td class="roster-player-number">18</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">DP</span>
+                                    <span class="roster-player-name">Derek Parker</span>
+                                </td>
+                                <td class="roster-player-number">11</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">CH</span>
+                                    <span class="roster-player-name">Corey Hall</span>
+                                </td>
+                                <td class="roster-player-number">25</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">JM</span>
+                                    <span class="roster-player-name">Jacob Miller</span>
+                                </td>
+                                <td class="roster-player-number">9</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">EC</span>
+                                    <span class="roster-player-name">Eddie Carter</span>
+                                </td>
+                                <td class="roster-player-number">14</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">RB</span>
+                                    <span class="roster-player-name">Ryan Brooks</span>
+                                </td>
+                                <td class="roster-player-number">31</td>
+                            </tr>
+                            <tr>
+                                <td class="roster-player">
+                                    <span class="roster-player-placeholder">NG</span>
+                                    <span class="roster-player-name">Nathan Green</span>
+                                </td>
+                                <td class="roster-player-number">19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="roster-list-details">
+                        <div class="roster-list-actions">
+                            <a href="#" class="match-more-info-link roster-list-link">
+                                <span>
+                                    View PDF Roster
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </section>
+        <!-- This section should only be viewable by users with Manger+ Access-->
+        <!-- <section class="section-container">
+            <div class="game-detail-section">
+                <div class="game-detail-section-header">
                     <h6 class="game-detail-section-header-content">Referee and Roster Information</h6>
                 </div>
                 <ul class="game-detail-links-container">
-                    <!-- Links TBD - need info on where/how to access info -->
                     <li class="game-detail-link"><a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-person-badge" viewBox="0 0 16 16">
@@ -434,11 +882,6 @@
                             </span>
                         </a></li>
                     <li class="game-detail-link"><a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-filetype-pdf" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z" />
-                            </svg>
                             <span>
                                 View Eastern FC Roster
                             </span>
@@ -455,7 +898,7 @@
                         </a></li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <section class="section-container">
             <div class="game-detail-section">
                 <div class="game-detail-section-header">
@@ -534,6 +977,47 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-container">
+            <div class="game-detail-section">
+                <div class="game-detail-section-header">
+                    <h6 class="game-detail-section-header-content">Manager Resources</h6>
+                </div>
+            </div>
+            <div class="section-container-columns">
+                <div class="section-container-col section-container-col-right">
+                    <button class="edit-game-btn">Edit match details</button>
+                </div>
+                <div class="section-container-col-divider"></div>
+                <div class="section-container-col">
+                    <div class="section-info-block">
+                        <div class="section-info-item">
+                            <span class="section-info-label">OTHSL Game ID</span>
+                            <span class="section-info-value">s1-40</span>
+                        </div>
+                        <div class="section-info-item">
+                            <span class="section-info-label">USO Game Number</span>
+                            <span class="section-info-value">691474</span>
+                        </div>
+                        <div class="section-info-item">
+                            <span class="section-info-label">Referee</span>
+                            <span class="section-info-value">Youssef Majja</span>
+                        </div>
+                        <div class="section-info-item">
+                            <span class="section-info-label">Email</span>
+                            <span class="section-info-value">youssefhajj807@gmail.com</span>
+                        </div>
+                        <div class="section-info-item">
+                            <span class="section-info-label">Phone</span>
+                            <span class="section-info-value">857-615-4584</span>
+                        </div>
+                        <div class="section-info-item">
+                            <span class="section-info-label">Status</span>
+                            <span class="section-info-value">Paid (CaF)</span>
+                        </div>
                     </div>
                 </div>
             </div>
