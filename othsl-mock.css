@@ -32,7 +32,7 @@ p {
 
 /* Set a consistent background-color and font family */
 body {
-    background-color: #fff;
+    background-color: #f9faf9;
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.5;
 }
@@ -612,7 +612,6 @@ main {
     height: auto;
     display: flex;
     justify-content: center;
-    padding-top: 56px;
     background-color: #f9faf9;
     min-height: 100vh;
 }
@@ -624,18 +623,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-@media (min-width:768px) {
-    main {
-        padding-top: 76px;
-    }
-}
-
-@media (min-width:900px) {
-    main {
-        padding-top: 86px
-    }
 }
 
 .main-ad-container {
