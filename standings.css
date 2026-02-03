@@ -23,12 +23,13 @@ main {
 
 .section-split-container {
     display: flex;
-    gap:32PX;
+    gap: 32px;
 }
 
 .section-container,
 .split-container-remainder,
-.split-container-main {
+.split-container-main,
+.split-container-equal {
     padding: 20px;
     background-color: rgba(255 255 255 / 1);
     border: 1px solid #f2f4f3;
@@ -36,8 +37,9 @@ main {
     box-shadow: 0 1px 3px rgba(0,0,0,0.03);
 }
 
+.split-container-equal,
 .split-container-remainder {
-    flex-grow: 1;
+    flex: 1;
 }
 
 .split-container-main {
@@ -1703,9 +1705,16 @@ Buttons and Button Icons
     flex: 1;
 }
 
+.team-page-team-photo-container {
+    padding: 0;
+    overflow: hidden;
+}
+
 .team-page-team-photo {
+    display: block;
     width: 100%;
-    border-radius: 6px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .team-page-contact {
@@ -1775,6 +1784,12 @@ Buttons and Button Icons
     .team-page-main-info-container {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-page-team-photo-container {
+        border-radius: 0;
     }
 }
 
