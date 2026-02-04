@@ -1023,6 +1023,25 @@ Buttons and Button Icons
     background-color: #6C757D;
 }
 
+.btn-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.btn-edit-icon {
+    width: 1em;
+
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.btn-edit:disabled {
+    cursor: not-allowed;
+    color: #6C757D;
+    background-color: #E0E0E0;
+}
+
 .edit-game-btn {
     border: 1px solid #6C757D;
 }
@@ -1032,6 +1051,13 @@ Buttons and Button Icons
 .btn-edit:hover,
 .btn-edit:active {
     background-color: #5A6268;
+}
+
+.btn-edit:disabled:hover,
+.btn-edit:disabled:active {
+    cursor: not-allowed;
+    color: #6C757D;
+    background-color: #E0E0E0;
 }
 
 .btn-table {
