@@ -1,26 +1,27 @@
 const navOver = document.querySelector('.nav-pop-menu-overlay');
+const confirmBackdrop = document.querySelector('.app-confirm-modal--backdrop');
 
 document.addEventListener('click', (e) => {
     const trigger = e.target.closest(
-        '.avail-btn, .app-drawer-close, .btn-edit-table, .ref-review-btn, .btn-primary, .btn-table'
+        '.btn-edit, .btn-icon, .btn-cancel, .btn-delete, .avail-btn, .app-drawer-close, .btn-edit-table, .ref-review-btn, .btn-primary, .btn-table'
     );
 
-    if (trigger) {
-        const moduleId =
-            trigger.dataset.moduleId ||
-            trigger.closest('.app-drawer')?.dataset.moduleId;
+    if (!trigger) return;
 
-        if(!moduleId) return;
+    const moduleId = trigger.dataset.moduleId;
 
-        const module = document.querySelector(
-            `.app-drawer[data-module-id="${moduleId}"]`
-        );
+    const container = document.querySelector(
+        `.app-drawer[data-module-id="${moduleId}"], .app-confirm-modal[data-module-id="${moduleId}"]`
+    )
 
-        if (!module) return;
+    if (!moduleId || !container) return;
 
-        module.classList.toggle('app-drawer-active');
-        navOverlay.classList.toggle('overlay-active');
+    if (container.classList.contains('app-confirm-modal')) {
+        container.classList.toggle('confirm-modal-active');
+        confirmBackdrop.classList.toggle('app-confirm-modal--backdrop-active');
+    } else {
+        container.classList.toggle('app-drawer-active');
+        navOver.classList.toggle('overlay-active');
     }
-
-})
+});
 
