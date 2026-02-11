@@ -2528,17 +2528,12 @@ footer {
     justify-content: center;
 }
 
-.footer-section-break {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid rgba(235 233 233 / 1);
-}
-
 .footer-container {
     width: 100%;
     max-width: 1248px;
-    padding: 1em 0;
+    padding: 1em .5em;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 1.5em;
     border-top: 1px solid rgba(235 233 233 / 1);
@@ -2579,6 +2574,14 @@ footer {
 
 .footer-menu--item a:hover {
     text-decoration: underline;
+}
+
+.footer-logo {
+    width: 125px;
+}
+
+.footer-logo img {
+    width: 100%;
 }
 
 @media (max-width:767px) {
@@ -3242,6 +3245,11 @@ REF INFO COMPARISON
     font-weight: 600;
     margin-bottom: .5em;
     font-family: 'Roboto', sans-serif;
+    color: #007BFF;
+}
+
+.referee-comp-container .section-header--sm:hover {
+    text-decoration: underline;
 }
 
 .referee-comp-table {
