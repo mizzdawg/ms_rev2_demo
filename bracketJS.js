@@ -5,6 +5,25 @@ const baseGap = 20;
 let prevGap = 20;
 let observer;
 
+// func to create bracket line structure
+function setBracketLines(rounds) {
+    for (let i = 0; i < rounds.length - 1; i++) {
+        const round = rounds[i];
+        const matches = round.querySelector('.bracket-round--inner')
+        const numMatches = matches.querySelectorAll('.bracket-round--matchup').length;
+        const connector = document.createElement("div");
+        
+        for (let i = 0; i < numMatches / 2; i++) {
+            const connectorUnit = document.createElement("div");
+            connectorUnit.classList.add('bracket-connector--unit');
+            connector.appendChild(connectorUnit);
+        }
+
+        connector.classList.add('bracket-connector');
+        round.after(connector);
+    }
+}
+
 // func to set mobile gap and padding top for each bracket round 
 function setMobileBracketSpacing(rounds) {
     rounds.forEach((round, i) => {
@@ -77,10 +96,10 @@ const options = {
 
 // intersectionObserver callback
 const callback = (entries) => {
-    entries.forEach((entry) => {
+    entries.forEach((entry, i) => {
         // grab bracket round element that displays all of that round's matchups
         const inner = entry.target.querySelector('.bracket-round--inner');
-        const nextRound = entry.target.nextElementSibling;
+        const nextRound = entry.target.nextElementSibling?.nextElementSibling;
         const nextInner = nextRound?.querySelector('.bracket-round--inner');
         if(entry.isIntersecting) {
             // entry.target.classList.add('focused');
@@ -122,3 +141,4 @@ function runMobileBracket(e) {
 
 mql.addEventListener('change', runMobileBracket);
 runMobileBracket(mql);
+setBracketLines(bracketRounds);
