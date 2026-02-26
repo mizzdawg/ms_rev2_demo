@@ -3326,7 +3326,7 @@ BRACKET
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    padding-top: 80px;
 }
 
 .bracket-header {
@@ -3530,21 +3530,23 @@ BRACKET
 
 @media (max-width:768px) {
     .bracket-wrapper {
-        margin-top: 70px;
+        padding-top: 70px;
         align-items: stretch;
     }
 
     .bracket {
-        overflow-x: scroll;
+        overflow-x: scroll; 
         overflow-y: visible;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         gap: 1em;
+
     }
 
     .bracket-round {
-        flex: 0 0 85%;
+        flex: 0 0 90%;
         scroll-snap-align: start;
+        padding: 0 .5em;
     }
 
     .bracket-connector,

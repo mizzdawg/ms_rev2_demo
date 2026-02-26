@@ -61,33 +61,6 @@ function removeMobileBracetSpacing(rounds) {
     });
 }
 
-// set initial gap and padding top for each bracket round 
-// bracketRounds.forEach((round, i) => {
-//     let gap, paddingTop;
-
-//     // calculate gap and padding top needed 
-//     if(i === 0) {
-//         gap = baseGap;
-//         paddingTop = 0;
-//     } else {
-//         paddingTop = (matchHeight + prevGap) / 2;
-//         gap = prevGap * 2 + matchHeight;
-//     }
-
-//     const inner = round.querySelector('.bracket-round--inner')
-
-//     // set gap and padding top for round
-//     inner.style.gap = `${gap}px`;
-//     inner.style.paddingTop = `${paddingTop}px`;
-
-//     // put calculations into dataset object for reset when round is not focused
-//     inner.dataset.gap = gap;
-//     inner.dataset.paddingTop = paddingTop;
-
-//     // update prevGap var for next round's calculation
-//     prevGap = gap;
-// });
-
 // intersectionObserver options
 const options = {
     root: document.querySelector('.bracket'),
@@ -142,3 +115,4 @@ function runMobileBracket(e) {
 mql.addEventListener('change', runMobileBracket);
 runMobileBracket(mql);
 setBracketLines(bracketRounds);
+
