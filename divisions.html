@@ -20,14 +20,14 @@
     <!-- This section contains the Top Nav -->
     <header class="nav-container">
         <nav>
-            <div class="nav-icon-container mobile-nav-container">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon ham-icon"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
-            </div>
             <div class="nav-responsive-container">
+                <div class="nav-icon-container mobile-nav-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon ham-icon"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
                 <div class="nav-logo-container">
                     <a href="index.html">
                         <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo" class="nav-logo">
@@ -39,25 +39,32 @@
                     <li class="nav-main-link"><a href="divisions.html">Divisions</a></li>
                 </ul>
             </div>
-            <div class="nav-icon-container mobile-nav-container">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon acct-icon"
-                    viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                </svg>
-            </div>
-            <div class="nav-icon-container nav-desktop-account-container">
-                <a href="#">
+            <div class="nav-responsive-container nav-container-right">
+                <div class="nav-logo-container">
+                    <a href="https://www.mass-soccer.org/">
+                        <img src="images/ms_white_transparent.png" alt="Mass Soccer Logo" class="nav-logo">
+                    </a>
+                </div>
+                <div class="nav-icon-container nav-account-container">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                         <path fill-rule="evenodd"
                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                     </svg>
-                    <div class="nav-desktop-account-text">
-                        <span>Hello, Max!</span>
-                        <span>View Account</span>
-                    </div>
+                    <span class="nav-account-text">Account</span>
+                </div>
+            </div>
+            <div class="nav-icon-container nav-log-in-container">
+                <a href="#" class="nav-log-in-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                    <span class="nav-log-in-text">Log in</span>
+                </a>
+                <a href="#" class="nav-sign-up-link">
+                    <span class="nav-sign-up-text">Sign up</span>
                 </a>
             </div>
         </nav>
@@ -95,7 +102,7 @@
                     </a>
                 </li>
                 <li class="nav-menu-pop-link">
-                    <a href="x">
+                    <a href="schedules.html">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
                             viewBox="0 0 16 16">
                             <path
@@ -136,6 +143,11 @@
                 <p class="nav-menu-pop-navigation-footer-copyright">© 2025 OTHSL & Jeremy L. Mordkoff -- All
                     Rights Reserved</p>
             </div>
+            <div class="nav-pop-menu-navigation-logo-container">
+                <a href="https://www.mass-soccer.org/">
+                    <img src="images/ms_transparent.png" alt="Mass Soccer logo" class="nav-logo">
+                </a>
+            </div>
         </div>
     </div>
 
@@ -143,16 +155,10 @@
     <div class="nav-pop-menu-container right-nav-pop">
         <div class="nav-pop-menu nav-pop-menu-navigation-right">
             <div class="nav-pop-menu-navigation-header">
-                <div class="nav-icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon acct-icon-solid"
-                        viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd"
-                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
-                    <div class="nav-menu-pop-account-header">
-                        <span class="nav-menu-pop-account-header-text">Max Carty</span>
-                    </div>
+                <div class="nav-pop-menu-navigation-logo-container">
+                    <a href="https://www.mass-soccer.org/">
+                        <img src="images/ms_transparent.png" alt="Mass Soccer logo" class="nav-logo">
+                    </a>
                 </div>
                 <div class="nav-pop-menu-button-container">
                     <button class="nav-pop-menu-button-x">
@@ -165,6 +171,17 @@
                 </div>
             </div>
             <hr>
+            <div class="nav-icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon acct-icon-solid"
+                    viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+                <div class="nav-menu-pop-account-header">
+                    <span class="nav-menu-pop-account-header-text">Max Carty</span>
+                </div>
+            </div>
             <div class="nav-menu-id-container">
                 <img src="images/mass_id.png" alt="Mass ID Card" class="nav-menu-id-card">
             </div>
@@ -182,13 +199,13 @@
             </div>
             <div class="nav-menu-pop-header">
                 <span class="nav-menu-pop-header-text">Upcoming Games</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="nav-menu-pop-header-icon icon-rotate"
+                <svg xmlns="http://www.w3.org/2000/svg" class="nav-menu-pop-header-icon"
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
                 </svg>
             </div>
-            <ul class="nav-menu-pop-sub-list sub-list-inactive">
+            <ul class="nav-menu-pop-sub-list">
                 <li class="nav-menu-pop-sub-item upcoming-matchup-sub-item">
                     <div class="nav-menu-upcoming-games">
                         <div class="nav-menu-upcoming-games-detail">
@@ -229,23 +246,25 @@
             <hr>
             <div class="nav-menu-pop-header">
                 <span class="nav-menu-pop-header-text">My Teams</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-pop-header-icon"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-pop-header-icon icon-rotate"
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
                 </svg>
             </div>
-            <ul class="nav-menu-pop-sub-list">
+            <ul class="nav-menu-pop-sub-list sub-list-inactive">
                 <li class="nav-menu-pop-sub-item">
                     <a href="#" class="nav-menu-pop-sub-link">
                         <img src="images/logo-1.png" alt="team 1 mock logo" class="mobile-link-logo">
                         <span>Torres FC</span>
+                        <span class="nav-menu-pop-sub-link-league">(OTHSL)</span>
                     </a>
                 </li>
                 <li class="nav-menu-pop-sub-item">
                     <a href="#" class="nav-menu-pop-sub-link">
                         <img src="images/logo-2.png" alt="team 2 mock logo" class="mobile-link-logo">
                         <span>Stellar FC</span>
+                        <span class="nav-menu-pop-sub-link-league">(Fricker Cup)</span>
                     </a>
                 </li>
             </ul>
@@ -269,7 +288,7 @@
             <hr>
             <div class="nav-menu-manage-account-container">
                 <a href="#" class="nav-menu-logout-link">
-                    <span>Logout</span>
+                    <span class="nav-menu-pop-header-text">Logout</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-logout-icon"
                         viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -280,7 +299,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> 
 
     <main>
         <section class="section-container section-container-intitial">

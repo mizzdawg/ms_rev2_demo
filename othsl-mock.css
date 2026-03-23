@@ -89,6 +89,10 @@ nav {
     gap: 40px;
 }
 
+.nav-responsive-container.nav-container-right {
+    gap: 0;
+}
+
 .nav-icon-container {
     display: flex;
     align-items: center;
@@ -148,8 +152,12 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .nav-responsive-container {
+        gap: .5em;
+    }
+
     .mobile-nav-container {
-        display: block;
+        display: flex;
     }
 
     .nav-desktop-account-link {
@@ -292,7 +300,6 @@ svg.acct-icon-solid {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 8px;
     background-color: white;
     position: sticky;
     top: 0;
@@ -346,8 +353,7 @@ svg.acct-icon-solid {
 .nav-pop-menu hr {
     border: 0;
     border-bottom: 1px solid #d1d9e0;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
 }
 
 .nav-menu-pop-header {
