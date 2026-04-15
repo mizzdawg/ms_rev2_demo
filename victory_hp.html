@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTHSL Mock</title>
+    <title>Mass Soccer Victory Platform</title>
     <link rel="stylesheet" href="othsl-mock.css">
+    <link rel="stylesheet" href="standings.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <!-- This section contains the Top Nav -->
-    <header class="nav-container">
+    <header class="nav-container ms-nav-container">
         <nav>
             <div class="nav-responsive-container">
-                <div class="nav-icon-container mobile-nav-container">
+                <!-- <div class="nav-icon-container mobile-nav-container">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon ham-icon"
                         viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
-                </div>
-                <div class="nav-logo-container">
-                    <a href="index.html">
-                        <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo" class="nav-logo">
-                    </a>
-                </div>
-                <ul class="nav-main-links">
-                    <li class="nav-main-link"><a href="schedules.html">Schedules</a></li>
-                    <li class="nav-main-link"><a href="standings.html">Standings</a></li>
-                    <li class="nav-main-link"><a href="divisions.html">Divisions</a></li>
-                </ul>
-            </div>
-            <div class="nav-responsive-container nav-container-right">
+                </div> -->
                 <div class="nav-logo-container">
                     <a href="https://www.mass-soccer.org/">
                         <img src="images/ms_white_transparent.png" alt="Mass Soccer Logo" class="nav-logo">
                     </a>
                 </div>
+            </div>
+            <div class="nav-responsive-container nav-container-right">
                 <div class="nav-icon-container nav-account-container">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -69,79 +58,6 @@
 
     <!-- This div is an overlay triggered by a click on either the hamburger menu icon or the account icon in the Top Nav -->
     <div class="nav-pop-menu-overlay"></div>
-    <!-- This div contains the Top Nav link list on mobile triggered by a click on the hamburger menu icon in the Top Nav -->
-    <div class="nav-pop-menu-container left-nav-pop">
-        <div class="nav-pop-menu nav-pop-menu-navigation">
-            <div class="nav-pop-menu-navigation-header">
-                <div class="nav-pop-menu-navigation-logo-container">
-                    <img src="images/Picture1_restroke_square.png" alt="OTHSL logo" class="nav-logo">
-                </div>
-                <div class="nav-pop-menu-button-container">
-                    <button class="nav-pop-menu-button-x">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-x-icon"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <ul class="nav-menu-pop-links">
-                <li class="nav-menu-pop-link">
-                    <a href="index.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
-                        </svg>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="nav-menu-pop-link">
-                    <a href="schedules.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                        </svg>
-                        <span>Schedules</span>
-                    </a>
-                </li>
-                <li class="nav-menu-pop-link">
-                    <a href="standings.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z" />
-                        </svg>
-                        <span>Standings</span>
-                    </a>
-                </li>
-                <li class="nav-menu-pop-link">
-                    <a href="divisions.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM3 11.5A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
-                        </svg>
-                        <span>Divisions</span>
-                    </a>
-                </li>
-            </ul>
-            <hr>
-            <div class="nav-menu-pop-navigation-footer">
-                <div class="nav-menu-pop-navigation-footer-links">
-                    <a href="#">About</a>
-                    <a href="#">League Constitution</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-                <p class="nav-menu-pop-navigation-footer-copyright">© 2025 OTHSL & Jeremy L. Mordkoff -- All
-                    Rights Reserved</p>
-            </div>
-        </div>
-    </div>
-
     <!-- This div contains the account information triggered by a click on the accouont icon in the Top Nav -->
     <div class="nav-pop-menu-container right-nav-pop">
         <div class="nav-pop-menu nav-pop-menu-navigation-right">
@@ -287,87 +203,124 @@
         </div>
     </div>
 
-
     <main>
-        <!-- This HTML needs to be optimized -->
-        <div class="main-container">
-            <!-- Commenting out the below ad section for now -->
-            <!-- <div class="main-ad-container">
-                <img src="images/Top10Promos.jpg" alt="Advertisement">
-            </div> -->
-            <div class="main-container">
-                <div class="main-news-container">
-                    <!-- Main news story HTML -->
-                    <div class="content-container news-top-story">
-                        <img src="images/25_Spring_CupS_SE_Banner__3__large.png" alt="story image"
-                            class="main-container-top-story-img" />
-                        <div class="main-container-top-story-info">
-                            <h1 class="main-header">Mass Soccer Spring Cups: Tournament Draw
-                                Announced
-                            </h1>
-                            <p class="main-container-top-story-text">Get all the details on the matchups and schedules
-                                as
-                                teams
-                                prepare for the Mass Soccer Spring Cups tournament.</p>
-                        </div>
-                    </div>
-
-                    <!-- List of news stories HTML -->
-                    <div class="content-container news-headlines">
-                        <ul class="main-container-headlines">
-                            <li class="main-container-headlines-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="" viewBox="0 0 16 16">
-                                    <path
-                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
-                                    <path
-                                        d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
-                                </svg>
-                                <span>More News</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>Important Spring Dates</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>Irregular Transfers Announcement</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>2024 AGM September 23 via Zoom at 7:00 PM</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>Venue Changes</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture2maClipped.png" alt="Mass Soccer Logo">
-                                <span>USASA Adult Soccer Fest</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>Head Trauma Study</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>Change to Forfeit Rule 13 B</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture2maClipped.png" alt="Mass Soccer Logo">
-                                <span>Referee Fees for the Playoffs</span>
-                            </li>
-                            <li class="main-container-headline">
-                                <img src="images/Picture1_restroke_square.png" alt="OTHSL Logo">
-                                <span>Payments to OTHSL for New Teams, Protests, Bonds, etc.</span>
-                            </li>
-                        </ul>
+        <section class="section-container section-container-intitial">
+            <div class="ms-hero-section-container">
+                <h1 class="section-header ms-hero-section-header">Mass Soccer Victory Platform</h1>
+            </div>
+            <div class="ms-hero-section-container">
+                <p class="ms-hero-para">One platform connecting every player, team, and league in Massachusetts.</p>
+                <p class="ms-hero-para">Built for players, managers, and league administrators.</p>
+                <p class="ms-hero-para">View match-day information, schedules, standings, rosters, match results, and more - all in one place.</p>
+            </div>
+            <div class="ms-hero-section-container">
+                <h2 class="ms-hero-section-subheader">Victory Leagues</h2>
+                <div class="ms-hero-league-grid-container">
+                    <div class="ms-hero-league-grid">
+                        <a class="ms-hero-league-card" href="https://victory.mass-soccer.org/standings?league_id=7&season_id=27">
+                            <img src="images/Picture1_restroke_square.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">OTHSL</span>
+                        </a>
+                        <a class="ms-hero-league-card" href="https://victory.mass-soccer.org/standings?league_id=114&season_id=2">
+                            <img src="images/os_logo.jpeg" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Ocean State Soccer League</span>
+                        </a>
+                        <a class="ms-hero-league-card" href="https://victory.mass-soccer.org/standings?league_id=164&season_id=8">
+                            <img src="images/usglogo1_nx1TQSl.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">United Soccer Group</span>
+                        </a>
+                        <a class="ms-hero-league-card" href="https://victory.mass-soccer.org/standings?league_id=201&season_id=28">
+                            <img src="images/ms7_logo_small.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">2026 Spring Sevens Div. 1 Women</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+            <h2 class="ms-hero-section-subheader">Victory Tournaments</h2>
+            <div class="ms-hero-section-container">
+                <div class="ms-hero-league-grid-container">
+                    <div class="ms-hero-league-grid">
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Picture2maClipped.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Men's State Cup</span>
+                        </a>   
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Picture2maClipped.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Over 30 Mengel Cup</span>
+                        </a>  
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Picture2maClipped.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Fricker Cup</span>
+                        </a>  
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Picture2maClipped.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Over 40 Cup</span>
+                        </a>  
+                    </div>
+                </div>
+            </div>
+            <div class="ms-hero-section-container">
+                <h2 class="ms-hero-section-subheader">Other Leagues</h2>
+                <p class="ms-hero-para">These leagues are not yet using the <span class="ms-hero-para-bold">Mass Soccer Victory Platform</span>.</p>
+                <div class="ms-hero-league-grid-container">
+                    <div class="ms-hero-league-grid">
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/bssl_logo_v3.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Bay State Soccer League</span>
+                        </a>   
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Picture2maClipped.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">CMWSL</span>
+                        </a>  
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Picture2maClipped.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">D-ONE Soccer League</span>
+                        </a>  
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/emwsl-logo-v3.png" alt="League Logo">
+                            <span class="ms-hero-league-card-name">EMWSL</span>
+                        </a>
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/CMWSL_small.jpg" alt="League Logo">
+                            <span class="ms-hero-league-card-name">CMWSL</span>
+                        </a> 
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/Futsal_logo_small.jpg" alt="League Logo">
+                            <span class="ms-hero-league-card-name">Mass Adult Futsal League</span>
+                        </a> 
+                        <a class="ms-hero-league-card" href="#">
+                            <img src="images/D-One_2_medium.jpg" alt="League Logo">
+                            <span class="ms-hero-league-card-name">D-ONE Soccer League</span>
+                        </a> 
+                    </div>
+                </div>
+                <p class="ms-hero-para"><span class="ms-hero-para-bold">Interested in getting your league added to the Victory Platform?</span> Let your league administrator know!</p>
+            </div>
+        </section>
     </main>
+<footer>
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <p>&copy 2026 Mass Soccer. All rights reserved.</p>
+            </div>
+            <ul class="footer-menu">
+                <li class="footer-menu--item">
+                    <a href="#">Terms</a>
+                </li>
+                <li class="footer-menu--item">
+                    <a href="mailto:webteam@mass-soccer.org">Feedback</a>
+                </li>
+                <li class="footer-menu--item">
+                    <a href="victory_hp.html#">Back To Top</a>
+                </li>
+            </ul>
+            <div class="footer-logo">
+                <a href="https://www.mass-soccer.org/">
+                    <img src="images/ma_soc_logo.png" alt="Mass Soccer logo">
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="othsl-mock.js"></script>
 </body>
-
 </html>

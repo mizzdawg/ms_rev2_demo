@@ -353,6 +353,7 @@ svg.acct-icon-solid {
 .nav-pop-menu hr {
     border: 0;
     border-bottom: 1px solid #d1d9e0;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
@@ -884,8 +885,10 @@ header.bssl-nav-container {
     background-color: #4b6d90;
 }
 
-/* .bssl-nav-logo {
-    width: 70px;
-    margin: 10px 0;
-} */
+/* MASS SOCCER NAV SPECIFIC CSS */
+header.ms-nav-container {
+    background: linear-gradient(to bottom, #35539e, #27479a, #193885);
+    border-bottom: 2px solid #0a2365;
+}
+
 
