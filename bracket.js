@@ -1,28 +1,28 @@
-const roundSelectors = document.querySelectorAll('.bracket-round-selector-test');
-const rounds = document.querySelectorAll('.bracket-round-container-test');
+const roundSelectors = document.querySelectorAll('.bracket-round-selector');
+const rounds = document.querySelectorAll('.bracket-round-container');
 
 function hideRounds(roundIdx) {
     if (window.innerWidth > 600) {
         rounds.forEach((round, i) => {
-            round.classList.remove('hide-round-test');
+            round.classList.remove('hide-round');
             if (i < roundIdx) {
-                round.classList.add('hide-round-test');
+                round.classList.add('hide-round');
             }
         })
     } else {
         rounds.forEach((round, i) => {
-            round.classList.remove('hide-round-test');
+            round.classList.remove('hide-round');
             if (i !== roundIdx) {
-                round.classList.add('hide-round-test');
+                round.classList.add('hide-round');
             }
         })
     }
 
     roundSelectors.forEach(selector => {
-        selector.classList.remove('bracket-round-selected-test');
+        selector.classList.remove('bracket-round-selected');
     })
 
-    roundSelectors[roundIdx].classList.add('bracket-round-selected-test');
+    roundSelectors[roundIdx].classList.add('bracket-round-selected');
     roundSelectors[roundIdx].scrollIntoView({
         behavior: 'smooth',
         inline: 'center', // or 'start'
@@ -31,7 +31,7 @@ function hideRounds(roundIdx) {
 }
 
 function showRounds(rounds) {
-    rounds.forEach(round => round.classList.remove('hide-round-test'));
+    rounds.forEach(round => round.classList.remove('hide-round'));
 }
 
 roundSelectors.forEach((roundSelector, idx) => {
