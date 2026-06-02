@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Registration</title>
+    <link rel="stylesheet" href="registration.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Team Select -->
+     <div class="reg-section">
+
+        <div class="reg-header">
+            <h1 class="reg-title">Select Team</h1>
+            <p class="reg-subtitle">Choose the team you would like to register.</p>
+        </div>
+
+        <div class="card">
+
+            <div class="team-list">
+
+                <label class="team-option">
+                    <input type="radio" name="team">
+                    South Shore FC
+                </label>
+
+                <label class="team-option">
+                    <input type="radio" name="team">
+                    Brockton United
+                </label>
+
+            </div>
+
+            <div class="button-row">
+                <div></div>
+                <button class="btn btn-primary">Continue</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Team Resigration Form (new team reg, tourney reg) -->
+    <div class="reg-section">
+
+        <h1 class="reg-title">New Team Registration</h1>
+
+        <div class="card">
+
+        <form class="form-grid">
+
+        <div class="form-group">
+        <label class="form-label">Team Name</label>
+        <input class="form-input">
+        </div>
+
+        <div class="form-row-2">
+
+        <div class="form-group">
+        <label class="form-label">Age Group</label>
+        <select class="form-select">
+            <option>Over 30</option>
+            <option>Over 40</option>
+            <option>Over 48</option>
+            <option>Over 55</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label class="form-label">Desired Start Season</label>
+        <select class="form-select">
+            <option>Spring 2026</option>
+            <option>Fall 2026</option>
+            <option>Spring 2027</option>
+        </select>
+        </div>
+
+        </div>
+
+        <div class="form-group">
+        <label class="form-label">Home Field Location</label>
+        <input class="form-input">
+        </div>
+
+        </form>
+
+        <div class="button-row">
+        <button class="btn btn-secondary">Back</button>
+        <button class="btn btn-primary">Continue</button>
+        </div>
+
+        </div>
+
+    </div>
+
+    <!-- Review Details -->
+     <div class="reg-section">
+    <div class="card">
+
+        <h2 class="card-title">Review Registration</h2>
+
+        <div class="summary-table">
+
+        <div class="summary-row">
+        <span>Team Name</span>
+        <span>South Shore FC</span>
+        </div>
+
+        <div class="summary-row">
+        <span>Age Group</span>
+        <span>Men's O30</span>
+        </div>
+
+        <div class="summary-row">
+        <span>Deposit Required</span>
+        <span>$200</span>
+        </div>
+
+        </div>
+
+        <div class="button-row">
+        <button class="btn btn-secondary">Edit</button>
+        <button class="btn btn-primary">
+        Continue To Payment
+        </button>
+        </div>
+
+    </div>
+</div>
+    <!-- Account Review (season reg, fine payment) -->
+     <div class="reg-section">
+    <div class="card">
+
+        <h2 class="card-title">
+        Account Review
+        </h2>
+
+        <div class="summary-table">
+
+        <div class="summary-row">
+        <span>Current Balance</span>
+        <span>$150</span>
+        </div>
+
+        <div class="summary-row summary-total">
+        <span>Total Due</span>
+        <span>$150</span>
+        </div>
+
+        </div>
+
+        <div class="card">
+
+        <div class="data-table">
+        <div class="data-header">
+        <div>Charge Summary</div>
+        </div>
+
+        <div class="data-header">
+        <div>Description</div>
+        <div>Amount</div>
+        </div>
+
+        <div class="data-row">
+        <div>Fine</div>
+        <div>$50</div>
+        </div>
+
+        </div>
+
+        </div>
+
+        <label style="display:block;margin-top:24px;">
+        <input type="checkbox">
+        I acknowledge the balance shown above.
+        </label>
+
+        <div class="button-row">
+        <button class="btn btn-secondary">
+        Contact Registrar
+        </button>
+
+        <button class="btn btn-primary">
+        Continue To Payment
+        </button>
+        </div>
+
+    </div>
+</div>
+    <!-- Admin Fee -->
+         <div class="reg-section">
+    <div class="card">
+
+        <h2 class="card-title">
+        Administrative Fee
+        </h2>
+
+        <div class="form-grid">
+
+        <div class="form-group">
+        <label class="form-label">Reason</label>
+
+        <select class="form-select">
+        <option>Player Protest</option>
+        <option>Identity Challenge</option>
+        <option>Roster Appeal</option>
+        <option>Other</option>
+        </select>
+
+        </div>
+
+        <div class="alert alert-info">
+        Fee: $75
+        </div>
+
+        </div>
+
+        <div class="button-row">
+        <button class="btn btn-primary">
+        Continue To Payment
+        </button>
+        </div>
+
+    </div>
+</div>
+    <!-- Payment -->
+     <div class="reg-section">
+
+    <div class="card">
+
+        <h2 class="card-title">
+        Payment
+        </h2>
+
+        <div class="summary-table">
+
+        <div class="summary-row">
+        <span>Registration Fee</span>
+        <span>$500</span>
+        </div>
+
+        <div class="summary-row summary-total">
+        <span>Total</span>
+        <span>$500</span>
+        </div>
+
+        </div>
+
+        <div class="alert alert-info">
+        Payment processor embedded here?
+        </div>
+
+        <div class="button-row">
+        <button class="btn btn-secondary">
+        Back
+        </button>
+
+        <button class="btn btn-primary">
+        Submit Payment
+        </button>
+        </div>
+
+    </div>
+        
+     </div>
+
+    <!-- Payment Success - Generic -->
+     <div class="reg-section">
+    <div class="card">
+
+        <div class="success-icon">
+        ✓
+        </div>
+
+        <h1 class="success-title">
+        Thank You
+        </h1>
+
+        <p class="success-subtitle">
+        Your submission has been received.
+        </p>
+
+        <div class="button-row">
+        <div></div>
+        <a class="btn btn-primary">
+        Return To Dashboard
+        </a>
+        </div>
+
+    </div>
+</div>
+    <!-- Payment Succes - Season -->
+     <div class="reg-section">
+     <div class="card">
+
+        <div class="success-icon">✓</div>
+
+        <h1 class="success-title">
+        Season Registered
+        </h1>
+
+        <div class="success-checklist">
+
+        <div class="success-item">
+        ✓ Payment Received
+        </div>
+
+        <div class="success-item">
+        ✓ Team Added To Season
+        </div>
+
+        <div class="success-item">
+        ✓ Scheduling Process Started
+        </div>
+
+        </div>
+
+    </div>
+</div>
+    <!-- Payment Succes - Balance -->
+     <div class="reg-section">
+    <div class="card">
+
+        <div class="success-icon">
+        ✓
+        </div>
+
+        <h1 class="success-title">
+        Balance Updated
+        </h1>
+
+        <div class="summary-table">
+
+        <div class="summary-row">
+        <span>Previous Balance</span>
+        <span>$150</span>
+        </div>
+
+        <div class="summary-row">
+        <span>Payment</span>
+        <span>$150</span>
+        </div>
+
+        <div class="summary-row summary-total">
+        <span>Current Balance</span>
+        <span>$0</span>
+        </div>
+
+        </div>
+
+    </div>
+</div>
+    <!-- Payment Succes - Tournament -->
+     <div class="reg-section">
+     <div class="card">
+
+        <div class="success-icon">
+        🏆
+        </div>
+
+        <h1 class="success-title">
+        You're In!
+        </h1>
+
+        <p class="success-subtitle">
+        South Shore FC has been registered.
+        </p>
+
+        <div class="cta-card">
+
+        <h3>
+        Roster Required
+        </h3>
+
+        <p>
+        Tournament rosters must be submitted before July 1.
+        </p>
+
+        <a class="btn btn-primary">
+        Create Team Roster
+        </a>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/* ==========================
+   OTHSL Registration System
+   ========================== */
+
+:root {
+    --color-primary: #0D274C;
+    --color-primary-hover: #12376a;
+
+    --color-success: #198754;
+    --color-danger: #dc3545;
+    --color-warning: #f59e0b;
+
+    --color-text: #1f2937;
+    --color-text-light: #6b7280;
+
+    --color-border: #e5e7eb;
+    --color-background: #f9faf9;
+    --color-surface: #ffffff;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --shadow-card:
+        0 1px 3px rgba(0,0,0,.04);
+
+    --max-width: 900px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+
+body {
+    /* background: var(--color-background); */
+    color: var(--color-text);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.reg-section {
+    max-width: var(--max-width);
+    margin: 120px auto 60px;
+    padding: 0 20px;
+}
+
+.reg-header {
+    margin-bottom: 32px;
+}
+
+.reg-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.reg-subtitle {
+    margin-top: 8px;
+    color: var(--color-text-light);
+    font-size: 16px;
+}
+
+/* ===== Stepper ===== */
+
+.stepper {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.step::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #d1d5db;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background: #d1d5db;
+}
+
+.step.active .step-circle {
+    background: var(--color-primary);
+}
+
+.step.complete .step-circle {
+    background: var(--color-success);
+}
+
+.step-label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ===== Cards ===== */
+
+.card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 32px;
+}
+
+.card + .card {
+    margin-top: 24px;
+}
+
+.card-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ===== Forms ===== */
+
+.form-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.form-row-2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+}
+
+.form-textarea {
+    min-height: 120px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--color-primary);
+}
+
+/* ===== Summary ===== */
+
+.summary-table {
+    width: 100%;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.summary-total {
+    border-top: 1px solid var(--color-border);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ===== Transaction Table ===== */
+
+.data-table {
+    width: 100%;
+}
+
+.data-header,
+.data-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding: 12px 0;
+}
+
+.data-header {
+    font-weight: 700;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.data-row {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* ===== Alerts ===== */
+
+.alert {
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.alert-info {
+    background: rgba(13,39,76,.08);
+    border: 1px solid rgba(13,39,76,.15);
+}
+
+.alert-success {
+    background: rgba(25,135,84,.08);
+    border: 1px solid rgba(25,135,84,.15);
+}
+
+/* ===== Buttons ===== */
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    background: white;
+}
+
+/* ===== Team Selection ===== */
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.team-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* ===== Success ===== */
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: rgba(25,135,84,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.success-title {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.success-subtitle {
+    text-align: center;
+    margin-top: 8px;
+    color: var(--color-text-light);
+}
+
+.success-checklist {
+    margin-top: 24px;
+}
+
+.success-item {
+    padding: 12px 0;
+}
+
+/* ===== CTA Card ===== */
+
+.cta-card {
+    margin-top: 24px;
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(13,39,76,.06);
+    border: 1px solid rgba(13,39,76,.15);
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+    .reg-title{
+        font-size:32px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .form-row-2{
+        grid-template-columns:1fr;
+    }
+
+    .button-row{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .data-header,
+    .data-row{
+        grid-template-columns:120px 1fr 90px;
+    }
+}
