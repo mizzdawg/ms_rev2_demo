@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Views</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+
+  <h1>Adult Soccer League</h1>
+
+  <p>What would you like to do?</p>
+
+  <a href="#" class="action-link">Register a New Team</a>
+  <a href="#" class="action-link">Register for a Season</a>
+  <a href="#" class="action-link">Pay a Fine or Bond</a>
+  <a href="#" class="action-link">Submit a Protest</a>
+  <a href="#" class="action-link">Register for a Tournament</a>
+
+</div>
+
+
+
+<div class="page">
+
+  <a href="#" class="back-link">Back</a>
+
+  <h1>You are registering Team ABC for the Fall 2026 season</h1>
+
+  <p>Please review the information and continue.</p>
+
+  <button class="button">Continue</button>
+
+</div>
+
+<div class="page">
+
+  <a href="#" class="back-link">Back</a>
+
+  <h1>What is your team name?</h1>
+
+  <div class="form-group">
+
+    <label class="label">Team Name</label>
+
+    <input type="text">
+
+  </div>
+
+  <button class="button">Continue</button>
+
+</div>
+
+
+<div class="page">
+
+  <a href="#" class="back-link">Back</a>
+
+  <h1>What age group will you be playing in?</h1>
+
+  <div class="form-group">
+
+    <label class="radio-item">
+      <input type="radio" name="age">
+      Over 30
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="age">
+      Over 40
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="age">
+      Over 48
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="age">
+      Over 55
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="age">
+      Over 62
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="age">
+      Over 68
+    </label>
+
+  </div>
+
+  <button class="button">Continue</button>
+
+</div>
+
+
+
+<div class="page">
+
+  <a href="#" class="back-link">Back</a>
+
+  <h1>When do you want to start playing?</h1>
+
+  <div class="form-group">
+
+    <label class="radio-item">
+      <input type="radio">
+      Fall 2026
+    </label>
+
+    <label class="radio-item">
+      <input type="radio">
+      Spring 2027
+    </label>
+
+    <label class="radio-item">
+      <input type="radio">
+      Other
+    </label>
+
+  </div>
+
+  <div class="form-group">
+
+    <label class="label">
+      Tell us when you would like to play
+    </label>
+
+    <input type="text">
+
+  </div>
+
+  <button class="button">Continue</button>
+
+</div>
+
+<div class="page">
+
+  <a href="#" class="back-link">Back</a>
+
+  <h1>What colors will your team be wearing?</h1>
+
+  <div class="form-group">
+
+    <label class="color-option">
+      <input type="radio">
+      <span class="swatch red"></span>
+      Red
+    </label>
+
+    <label class="color-option">
+      <input type="radio">
+      <span class="swatch blue"></span>
+      Blue
+    </label>
+
+    <label class="color-option">
+      <input type="radio">
+      <span class="swatch black"></span>
+      Black
+    </label>
+
+    <label class="color-option">
+      <input type="radio">
+      Other
+    </label>
+
+  </div>
+
+  <div class="form-group">
+
+    <label class="label">
+      Enter your team colors
+    </label>
+
+    <input type="text">
+
+  </div>
+
+  <button class="button">Continue</button>
+
+</div>
+
+
+
+
+<div class="page">
+
+  <a href="#" class="back-link">Back</a>
+
+  <h1>How would you like to pay?</h1>
+
+  <div class="form-group">
+
+    <label class="radio-item">
+      <input type="radio">
+      PayPal
+    </label>
+
+    <label class="radio-item">
+      <input type="radio">
+      Venmo
+    </label>
+
+    <label class="radio-item">
+      <input type="radio">
+      Credit Card
+    </label>
+
+  </div>
+
+  <div class="payment-box">
+
+    <label class="label">Card Number</label>
+    <input type="text">
+
+    <br><br>
+
+    <label class="label">Expiration Date</label>
+    <input type="text">
+
+    <br><br>
+
+    <label class="label">CVV</label>
+    <input type="text">
+
+  </div>
+
+  <br>
+
+  <button class="button">Submit Payment</button>
+
+</div>
+
+
+<div class="page">
+
+  <div class="confirmation-panel">
+
+    <h1>Application complete</h1>
+
+  </div>
+
+  <p>
+    Thank you for adding your team to the waitlist.
+  </p>
+
+</div>
+
+<div class="error-summary">
+
+  <h2>There is a problem</h2>
+
+  <ul>
+    <li>Select an age group</li>
+  </ul>
+
+</div>
+
+
+<div class="form-group form-group-error">
+
+  <div class="error-message">
+    Error: Select an age group
+  </div>
+
+  <!-- field here -->
+
+</div>
+
+</body>
+</html>
