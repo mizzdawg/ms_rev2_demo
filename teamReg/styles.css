@@ -477,11 +477,13 @@ Layout
 
     width:100%;
 
-    max-width:1280px;
+    max-width:960px;
 
-    margin:100px auto 0;
+    margin:0 auto;
 
-    padding:40px 0 80px;
+    padding:100px 24px 96px;
+
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
 }
 
 
@@ -497,7 +499,7 @@ Page Header
 
     align-items:flex-start;
 
-    margin-bottom:36px;
+    margin-bottom:40px;
 
 }
 
@@ -505,19 +507,25 @@ Page Header
 
     margin:0;
 
-    font-size:42px;
+    font-size:30px;
 
-    line-height:1.15;
+    line-height:1.25;
+
+    font-weight:600;
+
+    letter-spacing:-0.01em;
+
+    color:#0b0c0c;
 
 }
 
 .page-intro{
 
-    margin-top:10px;
+    margin-top:6px;
 
-    color:#505a5f;
+    color:#6b7280;
 
-    font-size:19px;
+    font-size:16px;
 
 }
 
@@ -577,25 +585,31 @@ Alert Banner
 
     align-items:center;
 
-    gap:30px;
+    gap:24px;
 
-    padding:28px;
+    padding:20px 24px;
 
-    margin-bottom:32px;
+    margin-bottom:40px;
 
-    border-left:8px solid rgb(183, 16, 44);
+    border:1px solid #f3d0cc;
 
-    background:rgb(255,242,244);
+    border-left:3px solid #d4351c;
 
-    border-radius:6px;
+    background:#fdf2f1;
+
+    border-radius:10px;
 
 }
 
 .alert h2{
 
-    margin:0 0 10px;
+    margin:0 0 4px;
 
-    font-size:30px;
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#0b0c0c;
 
 }
 
@@ -603,7 +617,9 @@ Alert Banner
 
     margin:0;
 
-    color:#505a5f;
+    color:#6b7280;
+
+    font-size:14px;
 
 }
 
@@ -631,9 +647,9 @@ Dashboard Panel
 
     align-items:center;
 
-    padding:24px 28px;
+    padding:18px 24px;
 
-    border-bottom:1px solid #ececec;
+    border-bottom:1px solid #e5e7eb;
 
 }
 
@@ -641,13 +657,23 @@ Dashboard Panel
 
     margin:0;
 
-    font-size:30px;
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#0b0c0c;
 
 }
 
 .panel-body{
 
-    padding:28px;
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    padding:20px 24px;
 
 }
 
@@ -675,7 +701,7 @@ Responsive
 
     }
 
-    .alert .button{
+    .alert .dash-btn{
 
         margin-top:20px;
 
@@ -825,9 +851,9 @@ Two Column Layout
 
     grid-template-columns:1fr 1fr;
 
-    gap:28px;
+    gap:24px;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 
 }
 
@@ -1013,20 +1039,100 @@ Responsive
 
     .page-header h1{
 
-        font-size:34px;
+        font-size:24px;
 
     }
 
     .panel-header{
 
-        padding:20px;
+        padding:16px 20px;
 
     }
 
     .panel-body{
 
-        padding:20px;
+        padding:16px 20px;
 
     }
+
+}
+
+/*=========================================================
+Account Dashboard v2 -- Redesign
+(dash- prefixed classes are exclusive to accountv2.html so
+they don't affect .button/.panel usage on other pages)
+=========================================================*/
+
+.dash-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:40px;
+
+    padding:0 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#00703c;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:background .15s ease;
+
+}
+
+.dash-btn:hover{
+
+    background:#005a30;
+
+    color:#fff;
+
+}
+
+.dash-btn:focus-visible{
+
+    outline:2px solid #00703c;
+
+    outline-offset:2px;
+
+}
+
+.dash-panel{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    box-shadow:0 1px 2px rgba(16,24,40,.04);
+
+    margin-bottom:24px;
+
+}
+
+.dash-panel p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:#4b5563;
 
 }
