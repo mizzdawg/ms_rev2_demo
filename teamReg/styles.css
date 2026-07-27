@@ -1,13 +1,3 @@
-:root {
-  --gov-text: #0b0c0c;
-  --gov-blue: #1d70b8;
-  --gov-green: #00703c;
-  --gov-red: #d4351c;
-  --gov-border: #b1b4b6;
-  --gov-focus: #ffdd00;
-  --gov-grey: #f3f2f1;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -15,7 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--gov-text);
+  color: #0b0c0c;
   background: #fff;
 }
 
@@ -28,7 +18,7 @@ body {
 .back-link {
   display: inline-block;
   margin-bottom: 32px;
-  color: var(--gov-blue);
+  color: #1d70b8;
   font-size: 18px;
 }
 
@@ -63,12 +53,12 @@ input[type="text"] {
   width: 100%;
   max-width: 500px;
   padding: 12px;
-  border: 2px solid var(--gov-text);
+  border: 2px solid #0b0c0c;
   font-size: 19px;
 }
 
 input[type="text"]:focus {
-  outline: 4px solid var(--gov-focus);
+  outline: 4px solid #ffdd00;
 }
 
 .radio-item {
@@ -85,7 +75,7 @@ input[type="text"]:focus {
 }
 
 .button {
-  background: var(--gov-green);
+  background: #00703c;
   color: white;
   border: none;
   padding: 14px 24px;
@@ -102,13 +92,13 @@ input[type="text"]:focus {
 .action-link {
   display: block;
   padding: 14px 0;
-  color: var(--gov-blue);
+  color: #1d70b8;
   font-size: 24px;
   text-decoration: none;
 }
 
 .confirmation-panel {
-  background: var(--gov-green);
+  background: #00703c;
   color: white;
   padding: 32px;
   margin-bottom: 24px;
@@ -120,20 +110,20 @@ input[type="text"]:focus {
 }
 
 .error-summary {
-  border-left: 6px solid var(--gov-red);
-  background: var(--gov-grey);
+  border-left: 6px solid #d4351c;
+  background: #f3f2f1;
   padding: 20px;
   margin-bottom: 32px;
 }
 
 .error-message {
-  color: var(--gov-red);
+  color: #d4351c;
   font-weight: bold;
   margin-bottom: 12px;
 }
 
 .form-group-error {
-  border-left: 6px solid var(--gov-red);
+  border-left: 6px solid #d4351c;
   padding-left: 16px;
 }
 
@@ -155,7 +145,7 @@ input[type="text"]:focus {
 .black { background:#111; }
 
 .payment-box {
-  border: 1px solid var(--gov-border);
+  border: 1px solid #b1b4b6;
   padding: 20px;
   margin-top: 20px;
 }
@@ -185,17 +175,17 @@ input[type="text"]:focus {
   padding-bottom: 24px;
   margin-bottom: 40px;
 
-  border-bottom: 1px solid var(--gov-border);
+  border-bottom: 1px solid #b1b4b6;
 }
 
 .account-nav a {
-  color: var(--gov-blue);
+  color: #1d70b8;
   text-decoration: none;
   font-size: 19px;
 }
 
 .account-nav a[aria-current="page"] {
-  color: var(--gov-text);
+  color: #0b0c0c;
   font-weight: 700;
 }
 
@@ -226,9 +216,9 @@ input[type="text"]:focus {
 ========================================== */
 
 .dashboard-section {
-  background: var(--gov-grey);
+  background: #f3f2f1;
 
-  border: 1px solid var(--gov-border);
+  border: 1px solid #b1b4b6;
 
   padding: 32px;
 
@@ -261,18 +251,18 @@ input[type="text"]:focus {
 
   background: white;
 
-  border: 2px solid var(--gov-border);
+  border: 2px solid #b1b4b6;
 
   text-decoration: none;
 
-  color: var(--gov-blue);
+  color: #1d70b8;
 
   font-size: 19px;
   font-weight: 700;
 }
 
 .quick-action:hover {
-  border-color: var(--gov-blue);
+  border-color: #1d70b8;
 }
 
 /* ==========================================
@@ -287,7 +277,7 @@ input[type="text"]:focus {
 .team-card {
   background: white;
 
-  border: 1px solid var(--gov-border);
+  border: 1px solid #b1b4b6;
 
   padding: 24px;
 }
@@ -309,7 +299,7 @@ input[type="text"]:focus {
 }
 
 .team-actions a {
-  color: var(--gov-blue);
+  color: #1d70b8;
 }
 
 /* ==========================================
@@ -325,7 +315,7 @@ input[type="text"]:focus {
 .panel {
   background: white;
 
-  border: 1px solid var(--gov-border);
+  border: 1px solid #b1b4b6;
 
   padding: 24px;
 }
@@ -351,7 +341,7 @@ input[type="text"]:focus {
 .info-panel {
   background: white;
 
-  border: 1px solid var(--gov-border);
+  border: 1px solid #b1b4b6;
 
   padding: 24px;
 }
@@ -362,7 +352,7 @@ input[type="text"]:focus {
 }
 
 .info-panel a {
-  color: var(--gov-blue);
+  color: #1d70b8;
 }
 
 /* ==========================================
@@ -376,7 +366,7 @@ input[type="text"]:focus {
 
 .simple-list li {
   padding: 12px 0;
-  border-bottom: 1px solid var(--gov-border);
+  border-bottom: 1px solid #b1b4b6;
 }
 
 .simple-list li:last-child {
@@ -392,13 +382,13 @@ input[type="text"]:focus {
 
   padding-top: 24px;
 
-  border-top: 1px solid var(--gov-border);
+  border-top: 1px solid #b1b4b6;
 
   color: #505a5f;
 }
 
 .footer a {
-  color: var(--gov-blue);
+  color: #1d70b8;
 }
 
 /* ==========================================
@@ -424,5 +414,619 @@ input[type="text"]:focus {
   .quick-actions {
     grid-template-columns: 1fr;
   }
+
+}
+
+/*=========================================================
+MASS Adult Soccer League
+Dashboard CSS
+Part 1
+=========================================================*/
+
+/*=========================================================
+Reset
+=========================================================*/
+
+html{
+
+    font-size:16px;
+
+}
+
+body{
+
+    margin:0;
+
+    background:#f8f8f8;
+
+    color:#0b0c0c;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height:1.55;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    color:#005ea5;
+
+}
+
+a:hover{
+
+    color:#003078;
+
+}
+
+/*=========================================================
+Layout
+=========================================================*/
+
+.team-dash-container {
+
+    width:100%;
+
+    max-width:1280px;
+
+    margin:100px auto 0;
+
+    padding:40px 0 80px;
+}
+
+
+/*=========================================================
+Page Header
+=========================================================*/
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:36px;
+
+}
+
+.page-header h1{
+
+    margin:0;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+}
+
+.page-intro{
+
+    margin-top:10px;
+
+    color:#505a5f;
+
+    font-size:19px;
+
+}
+
+/*=========================================================
+Buttons
+=========================================================*/
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:52px;
+
+    padding:0 24px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#00703c;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.18s ease;
+
+}
+
+.button:hover{
+
+    background:#005a30;
+
+    color:#fff;
+
+}
+
+/*=========================================================
+Alert Banner
+=========================================================*/
+
+.alert{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:28px;
+
+    margin-bottom:32px;
+
+    border-left:8px solid rgb(183, 16, 44);
+
+    background:rgb(255,242,244);
+
+    border-radius:6px;
+
+}
+
+.alert h2{
+
+    margin:0 0 10px;
+
+    font-size:30px;
+
+}
+
+.alert p{
+
+    margin:0;
+
+    color:#505a5f;
+
+}
+
+/*=========================================================
+Dashboard Panel
+=========================================================*/
+
+.panel{
+
+    background:#ffffff;
+
+    border:1px solid #e4e4e4;
+
+    border-radius:6px;
+
+    margin-bottom:28px;
+
+}
+
+.panel-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 28px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.panel-header h2{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.panel-body{
+
+    padding:28px;
+
+}
+
+/*=========================================================
+Responsive
+=========================================================*/
+
+@media (max-width:900px){
+
+    .container{
+
+        padding:0 20px;
+
+    }
+
+    .page-header{
+
+        display:block;
+
+    }
+
+    .alert{
+
+        display:block;
+
+    }
+
+    .alert .button{
+
+        margin-top:20px;
+
+    }
+
+}
+
+/*=========================================================
+Quick Actions
+=========================================================*/
+
+.action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:18px;
+
+    padding:28px;
+
+}
+
+.action-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:140px;
+
+    padding:24px;
+
+    background:#fff;
+
+    border:1px solid #b1b4b6;
+
+    text-decoration:none;
+
+    transition:.18s ease;
+
+}
+
+.action-card:hover{
+
+    border-color:#005ea5;
+
+    background:#fafafa;
+
+}
+
+.action-card strong{
+
+    font-size:22px;
+
+    color:#0b0c0c;
+
+    margin-bottom:14px;
+
+}
+
+.action-card span{
+
+    color:#505a5f;
+
+    line-height:1.5;
+
+}
+
+/*=========================================================
+Team List
+=========================================================*/
+
+.team-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.team-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:32px;
+
+    padding:26px 28px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.team-card:last-child{
+
+    border-bottom:none;
+
+}
+
+.team-card h3{
+
+    margin:0 0 8px;
+
+    font-size:25px;
+
+}
+
+.team-card p{
+
+    margin:0;
+
+    color:#505a5f;
+
+}
+
+.team-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.team-links a{
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+Two Column Layout
+=========================================================*/
+
+.two-column{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:28px;
+
+    margin-bottom:28px;
+
+}
+
+/*=========================================================
+Information Grid
+=========================================================*/
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+    padding:28px;
+
+}
+
+.info-card{
+
+    border:1px solid #ececec;
+
+    padding:24px;
+
+    background:#fff;
+
+}
+
+.info-card h3{
+
+    margin-top:0;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.info-card p{
+
+    margin:8px 0;
+
+}
+
+.info-card ul{
+
+    margin:0;
+
+    padding-left:20px;
+
+}
+
+/*=========================================================
+Lists
+=========================================================*/
+
+.panel ul{
+
+    margin:0;
+
+    padding-left:22px;
+
+}
+
+.panel li{
+
+    margin-bottom:10px;
+
+}
+
+/*=========================================================
+Footer
+=========================================================*/
+
+.footer{
+
+    margin-top:60px;
+
+    padding-top:24px;
+
+    border-top:1px solid #b1b4b6;
+
+    color:#505a5f;
+
+    font-size:15px;
+
+}
+
+/*=========================================================
+Utility
+=========================================================*/
+
+.text-muted{
+
+    color:#505a5f;
+
+}
+
+.mt-0{
+
+    margin-top:0;
+
+}
+
+.mb-0{
+
+    margin-bottom:0;
+
+}
+
+.mb-16{
+
+    margin-bottom:16px;
+
+}
+
+.mb-24{
+
+    margin-bottom:24px;
+
+}
+
+.mb-32{
+
+    margin-bottom:32px;
+
+}
+
+/*=========================================================
+Responsive
+=========================================================*/
+
+@media (max-width:960px){
+
+    .two-column{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .team-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .team-links{
+
+        margin-top:16px;
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .action-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .main-nav .container{
+
+        gap:18px;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .page-header h1{
+
+        font-size:34px;
+
+    }
+
+    .panel-header{
+
+        padding:20px;
+
+    }
+
+    .panel-body{
+
+        padding:20px;
+
+    }
 
 }
