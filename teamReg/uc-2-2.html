@@ -13,39 +13,55 @@
 
   <h1>How would you like to pay?</h1>
 
+  <p>You are paying <strong>$50</strong>.</p>
+
   <div class="form-group">
 
     <label class="radio-item">
-      <input type="radio" name="payment-method">
+      <input type="radio" name="payment-method" value="paypal">
       PayPal
     </label>
 
     <label class="radio-item">
-      <input type="radio" name="payment-method">
+      <input type="radio" name="payment-method" value="venmo">
       Venmo
     </label>
 
     <label class="radio-item">
-      <input type="radio" name="payment-method">
+      <input type="radio" name="payment-method" value="credit-card">
       Credit Card
     </label>
 
   </div>
 
-  <div class="payment-box">
+  <div class="payment-box" id="paypal-fields">
 
-    <label class="label">Card Number</label>
-    <input type="text">
+    <label class="label" for="paypal-email">PayPal Email Address</label>
+    <input type="text" id="paypal-email">
+
+  </div>
+
+  <div class="payment-box" id="venmo-fields">
+
+    <label class="label" for="venmo-username">Venmo Username</label>
+    <input type="text" id="venmo-username">
+
+  </div>
+
+  <div class="payment-box" id="credit-card-fields">
+
+    <label class="label" for="card-number">Card Number</label>
+    <input type="text" id="card-number">
 
     <br><br>
 
-    <label class="label">Expiration Date</label>
-    <input type="text">
+    <label class="label" for="card-expiration">Expiration Date</label>
+    <input type="text" id="card-expiration">
 
     <br><br>
 
-    <label class="label">CVV</label>
-    <input type="text">
+    <label class="label" for="card-cvv">CVV</label>
+    <input type="text" id="card-cvv">
 
   </div>
 
@@ -54,5 +70,6 @@
   <button class="button"><a href="uc-2-3.html">Submit Payment</a></button>
 
 </div>
+<script src="payment-toggle.js" defer></script>
 </body>
 </html>
