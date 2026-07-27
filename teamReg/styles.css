@@ -249,6 +249,99 @@ input[type="text"]:focus {
   margin-top: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.summary-list {
+  margin: 0 0 40px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 170px 1fr auto;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-key {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0b0c0c;
+}
+
+.summary-value {
+  margin: 0;
+  font-size: 15px;
+  color: #0b0c0c;
+}
+
+.summary-action {
+  margin: 0;
+  text-align: right;
+}
+
+.summary-action a {
+  color: #005ea5;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.summary-action a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .summary-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .summary-action {
+    text-align: left;
+  }
+}
+
+.waitlist {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.waitlist li {
+  padding: 8px 0;
+  color: #4b5563;
+}
+
+.waitlist li.waitlist-you {
+  color: #0b0c0c;
+  font-weight: 600;
+}
+
+.waitlist-you-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #00703c;
+  background: #f6faf7;
+  color: #00703c;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
 /* ==========================================
    ACCOUNT DASHBOARD
 ========================================== */
