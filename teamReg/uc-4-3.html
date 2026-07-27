@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appeals and Protests - Step 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <a href="#" class="back-link" id="dynamic-back-link">Back</a>
+
+  <h1>Explain your appeal or protest:</h1>
+
+  <div class="form-group">
+
+    <label class="label" for="protest-explanation">Explanation</label>
+
+    <textarea id="protest-explanation" rows="6"></textarea>
+
+  </div>
+
+  <button class="button"><a href="uc-4-3a.html">Continue</a></button>
+
+</div>
+<script>
+  document.getElementById('dynamic-back-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    history.back();
+  });
+</script>
+</body>
+</html>

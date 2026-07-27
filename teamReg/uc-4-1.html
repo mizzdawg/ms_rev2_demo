@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Team Registration - Step 1</title>
+    <title>Appeals and Protests - Step 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page">
+<div class="page">
 
   <a href="accountv2.html" class="back-link">Back</a>
 
-  <h1>Explain your protest:</h1>
+  <fieldset>
 
-  <div class="form-group">
+    <legend>
+      <h1>What are you appealing or protesting?</h1>
+    </legend>
 
-    <label class="label">Explanation</label>
+    <div class="form-group" id="protest-type-group">
 
-    <input type="text">
+      <p class="error-message" id="protest-type-error" hidden>Error: Select what you're appealing or protesting</p>
 
-  </div>
+      <label class="radio-item">
+        <input type="radio" name="protest-type" value="ref-decision">
+        Ref decision
+      </label>
 
-  <button class="button"><a href="uc-4-1a.html">Continue</a></button>
+      <label class="radio-item">
+        <input type="radio" name="protest-type" value="directors-ruling">
+        Director's ruling
+      </label>
+
+      <label class="radio-item">
+        <input type="radio" name="protest-type" value="committee-ruling">
+        Committee ruling
+      </label>
+
+    </div>
+
+  </fieldset>
+
+  <p class="hint">Note: Yellow and red cards cannot be appealed or protested.</p>
+
+  <button class="button" id="protest-type-continue" type="button">Continue</button>
 
 </div>
+<script src="protest-type-routing.js" defer></script>
 </body>
 </html>
