@@ -10,98 +10,169 @@ body {
 }
 
 .page {
-  max-width: 720px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 72px 24px 96px;
 }
 
 .back-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 32px;
-  color: #1d70b8;
-  font-size: 18px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #0b0c0c;
+}
+
+.back-link::before {
+  content: "\2190";
 }
 
 h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  margin: 0 0 24px;
-  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 0 0 32px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #0b0c0c;
 }
 
 p {
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.6;
+  color: #4b5563;
 }
 
 .form-group {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .label {
   display: block;
-  font-size: 19px;
-  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b0c0c;
+  margin-bottom: 8px;
 }
 
 .hint {
-  color: #505a5f;
-  margin-bottom: 12px;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 input[type="text"] {
   width: 100%;
-  max-width: 500px;
-  padding: 12px;
-  border: 2px solid #0b0c0c;
-  font-size: 19px;
+  max-width: 480px;
+  padding: 11px 14px;
+  border: 2px solid #6b7280;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0b0c0c;
+  background: #fff;
 }
 
 input[type="text"]:focus {
-  outline: 4px solid #ffdd00;
+  outline: 3px solid #00703c;
+  outline-offset: 1px;
+  border-color: #00703c;
 }
 
-.radio-item {
+.radio-item,
+.color-option {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 0;
-  font-size: 19px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0b0c0c;
 }
 
-.radio-item input {
+.radio-item:hover,
+.color-option:hover {
+  background: #f6faf7;
+  border-color: #e5e7eb;
+}
+
+.radio-item input,
+.color-option input {
   width: 24px;
   height: 24px;
+  accent-color: #00703c;
 }
 
 .button {
   background: #00703c;
   color: white;
   border: none;
-  padding: 14px 24px;
-  font-size: 19px;
-  font-weight: 700;
+  border-radius: 8px;
+  padding: 13px 28px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color .15s ease;
 }
 
-.button a {
+.button:hover {
+  background: #005a30;
+}
+
+.button:focus-visible {
+  outline: 3px solid #00703c;
+  outline-offset: 2px;
+}
+
+.button a,
+.button a:hover {
     color: white;
     text-decoration: none;
 }
 
 .action-link {
-  display: block;
-  padding: 14px 0;
-  color: #1d70b8;
-  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 2px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #0b0c0c;
+  font-size: 17px;
+  font-weight: 500;
   text-decoration: none;
+}
+
+.action-link:last-of-type {
+  border-bottom: none;
+}
+
+.action-link::after {
+  content: "\2192";
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.action-link:hover {
+  color: #00703c;
+}
+
+.action-link:hover::after {
+  color: #00703c;
 }
 
 .confirmation-panel {
   background: #00703c;
   color: white;
   padding: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  border-radius: 12px;
 }
 
 .confirmation-panel h1 {
@@ -110,34 +181,48 @@ input[type="text"]:focus {
 }
 
 .error-summary {
-  border-left: 6px solid #d4351c;
-  background: #f3f2f1;
-  padding: 20px;
+  border: 1px solid #f3d0cc;
+  border-left: 3px solid #d4351c;
+  background: #fdf2f1;
+  border-radius: 10px;
+  padding: 20px 24px;
   margin-bottom: 32px;
+}
+
+.error-summary h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b0c0c;
+}
+
+.error-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.error-summary li {
+  color: #0b0c0c;
+  margin-bottom: 4px;
 }
 
 .error-message {
   color: #d4351c;
-  font-weight: bold;
-  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 
 .form-group-error {
-  border-left: 6px solid #d4351c;
-  padding-left: 16px;
-}
-
-.color-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
+  border-left: 3px solid #d4351c;
+  padding-left: 14px;
 }
 
 .swatch {
-  width: 24px;
-  height: 24px;
-  border: 1px solid #000;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,.12);
 }
 
 .red { background:#d4351c; }
@@ -145,9 +230,23 @@ input[type="text"]:focus {
 .black { background:#111; }
 
 .payment-box {
-  border: 1px solid #b1b4b6;
-  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
   margin-top: 20px;
+  background: #fff;
+}
+
+.payment-box br {
+  display: none;
+}
+
+.payment-box .label {
+  margin-top: 18px;
+}
+
+.payment-box .label:first-of-type {
+  margin-top: 0;
 }
 
 /* ==========================================
@@ -530,50 +629,6 @@ Page Header
 }
 
 /*=========================================================
-Buttons
-=========================================================*/
-
-.button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:52px;
-
-    padding:0 24px;
-
-    border:none;
-
-    border-radius:6px;
-
-    background:#00703c;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    font-size:18px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.18s ease;
-
-}
-
-.button:hover{
-
-    background:#005a30;
-
-    color:#fff;
-
-}
-
-/*=========================================================
 Alert Banner
 =========================================================*/
 
@@ -717,59 +772,167 @@ Quick Actions
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    gap:18px;
+    gap:14px;
 
-    padding:28px;
+    padding:24px;
 
 }
 
 .action-card{
 
+    position:relative;
+
     display:flex;
 
     flex-direction:column;
 
-    justify-content:space-between;
+    gap:8px;
 
-    min-height:140px;
+    padding:18px;
 
-    padding:24px;
+    padding-right:38px;
 
-    background:#fff;
+    background-color:#fff;
 
-    border:1px solid #b1b4b6;
+    border:1px solid #e5e7eb;
+
+    border-radius:10px;
 
     text-decoration:none;
 
-    transition:.18s ease;
+    transition:border-color .15s ease,background-color .15s ease,box-shadow .15s ease;
+
+}
+
+.action-card::after{
+
+    content:"\2192";
+
+    position:absolute;
+
+    top:18px;
+
+    right:16px;
+
+    color:#9ca3af;
+
+    font-size:16px;
+
+    line-height:1;
 
 }
 
 .action-card:hover{
 
-    border-color:#005ea5;
+    border-color:#00703c;
 
-    background:#fafafa;
+    background-color:#f6faf7;
+
+    box-shadow:0 1px 3px rgba(0,112,60,.15);
+
+}
+
+/* League branding: a two-color bar down the left edge.
+   Add a new league by defining --league-color-1/-2 on a new
+   [data-league="..."] rule -- no other changes needed. */
+
+.action-card[data-league]{
+
+    padding-left:22px;
+
+    background-image:linear-gradient(to bottom,var(--league-color-1,#e5e7eb) 50%,var(--league-color-2,#e5e7eb) 50%);
+
+    background-repeat:no-repeat;
+
+    background-size:5px 100%;
+
+    background-position:left top;
+
+}
+
+.action-card[data-league="othsl"]{
+
+    --league-color-1:rgb(18,39,73);
+
+    --league-color-2:rgb(161,47,45);
+
+}
+
+.action-card[data-league="ocwsl"]{
+
+    --league-color-1:rgb(43,99,167);
+
+    --league-color-2:#000;
+
+}
+
+.action-card:hover::after{
+
+    color:#00703c;
 
 }
 
 .action-card strong{
 
-    font-size:22px;
+    font-size:15px;
+
+    font-weight:600;
 
     color:#0b0c0c;
 
-    margin-bottom:14px;
+}
+
+.action-card:hover strong{
+
+    color:#00703c;
 
 }
 
 .action-card span{
 
-    color:#505a5f;
+    font-size:13px;
+
+    color:#6b7280;
 
     line-height:1.5;
+
+}
+
+.action-card .action-card-meta{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    align-self:flex-start;
+
+    margin-top:4px;
+
+    padding:3px 10px;
+
+    border-radius:999px;
+
+    background:#f3f4f6;
+
+    border:1px solid transparent;
+
+    color:#4b5563;
+
+    font-size:12px;
+
+    font-weight:500;
+
+}
+
+.action-card[data-league] .action-card-meta{
+
+    background:#fff;
+
+    border-color:var(--league-color-1,#e5e7eb);
+
+    color:var(--league-color-1,#4b5563);
 
 }
 
