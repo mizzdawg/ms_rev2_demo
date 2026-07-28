@@ -1898,6 +1898,83 @@ below are specific to manage-team.html)
 
 }
 
+/* Secondary action row: pairs intro copy in a panel-block with
+   a small outlined icon-link, e.g. Email All Managers, Map to
+   Homefield Info -- used instead of putting these in the panel
+   header. */
+
+.section-action-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin-bottom:16px;
+
+}
+
+.section-action-row p{
+
+    margin:0;
+
+}
+
+.icon-action-link{
+
+    display:inline-flex;
+
+    flex-shrink:0;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 14px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    color:#0b0c0c;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:border-color .15s ease,color .15s ease,background-color .15s ease;
+
+}
+
+.icon-action-link svg{
+
+    width:14px;
+
+    height:14px;
+
+    flex-shrink:0;
+
+}
+
+.icon-action-link:hover{
+
+    border-color:#00703c;
+
+    color:#00703c;
+
+    background:#f6faf7;
+
+}
+
 /* Roster summary */
 
 .roster-summary{
