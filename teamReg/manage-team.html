@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Boston FC</title>
+    <link rel="stylesheet" href="../othsl-mock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- This section contains the Top Nav -->
+    <header class="nav-container">
+        <nav>
+            <div class="nav-responsive-container">
+                <div class="nav-icon-container mobile-nav-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon ham-icon"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+                <div class="nav-logo-container">
+                    <a href="index.html">
+                        <img src="../images/Picture1_restroke_square.png" alt="OTHSL Logo" class="nav-logo">
+                    </a>
+                </div>
+                <ul class="nav-main-links">
+                    <li class="nav-main-link"><a href="schedules.html">Schedules</a></li>
+                    <li class="nav-main-link"><a href="standings.html">Standings</a></li>
+                    <li class="nav-main-link"><a href="divisions.html">Divisions</a></li>
+                </ul>
+            </div>
+            <div class="nav-responsive-container nav-container-right">
+                <div class="nav-logo-container">
+                    <a href="https://www.mass-soccer.org/">
+                        <img src="../images/ms_white_transparent.png" alt="Mass Soccer Logo" class="nav-logo">
+                    </a>
+                </div>
+                <div class="nav-icon-container nav-account-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                    <span class="nav-account-text">Account</span>
+                </div>
+            </div>
+            <div class="nav-icon-container nav-log-in-container">
+                <a href="#" class="nav-log-in-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                    <span class="nav-log-in-text">Log in</span>
+                </a>
+                <a href="#" class="nav-sign-up-link">
+                    <span class="nav-sign-up-text">Sign up</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- This div is an overlay triggered by a click on either the hamburger menu icon or the account icon in the Top Nav -->
+    <div class="nav-pop-menu-overlay"></div>
+    <!-- This div contains the Top Nav link list on mobile triggered by a click on the hamburger menu icon in the Top Nav -->
+    <div class="nav-pop-menu-container left-nav-pop">
+        <div class="nav-pop-menu nav-pop-menu-navigation">
+            <div class="nav-pop-menu-navigation-header">
+                <div class="nav-pop-menu-navigation-logo-container">
+                    <img src="../images/Picture1_restroke_square.png" alt="OTHSL logo" class="nav-logo">
+                </div>
+                <div class="nav-pop-menu-button-container">
+                    <button class="nav-pop-menu-button-x">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-x-icon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <ul class="nav-menu-pop-links">
+                <li class="nav-menu-pop-link">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-menu-pop-link">
+                    <a href="schedules.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                        </svg>
+                        <span>Schedules</span>
+                    </a>
+                </li>
+                <li class="nav-menu-pop-link">
+                    <a href="standings.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z" />
+                        </svg>
+                        <span>Standings</span>
+                    </a>
+                </li>
+                <li class="nav-menu-pop-link">
+                    <a href="divisions.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-menu-link-icon"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM3 11.5A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                        </svg>
+                        <span>Divisions</span>
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="nav-menu-pop-navigation-footer">
+                <div class="nav-menu-pop-navigation-footer-links">
+                    <a href="#">About</a>
+                    <a href="#">League Constitution</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p class="nav-menu-pop-navigation-footer-copyright">© 2025 OTHSL & Jeremy L. Mordkoff -- All
+                    Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-dash-container">
+
+        <a href="accountv2.html" class="back-link">Back to Dashboard</a>
+
+        <div class="page-header">
+
+            <div class="team-page-heading">
+
+                <img src="../images/blank_shield.png" alt="Boston FC logo" class="team-page-logo">
+
+                <div>
+
+                    <h1>Boston FC</h1>
+
+                    <p class="page-intro">Massachusetts Adult Futsal &middot; Massachusetts Adult Futsal Archive</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <section class="alert warning">
+
+            <div>
+
+                <h2>Boston FC's registration has expired</h2>
+
+                <p>Renew your Fall 2026 season registration to keep this team active.</p>
+
+            </div>
+
+            <a href="uc-2-1a.html" class="dash-btn">Renew Registration</a>
+
+        </section>
+
+        <section class="alert warning">
+
+            <div>
+
+                <h2>Outstanding fine: $100</h2>
+
+                <p>Fine X is due for Boston FC.</p>
+
+            </div>
+
+            <a href="uc-3-1a.html" class="dash-btn">Pay Fine or Bond</a>
+
+        </section>
+
+        <!-- Team Notice -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>Team Notice</h2>
+
+                <a href="#" class="panel-header-action">Edit Notice</a>
+
+            </div>
+
+            <div class="panel-block">
+
+                <p>No manager notice found.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Players / Roster -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>Players / Roster</h2>
+
+                <span class="status-pill status-pill-success">Rosters Open</span>
+
+            </div>
+
+            <div class="panel-block roster-summary">
+
+                <div class="roster-stats">
+
+                    <div class="roster-stat">
+                        <span class="roster-stat-value">8 <span class="roster-stat-max">of 14</span></span>
+                        <span class="roster-stat-label">Players</span>
+                    </div>
+
+                    <div class="roster-stat">
+                        <span class="roster-stat-value">8</span>
+                        <span class="roster-stat-label">Active</span>
+                    </div>
+
+                    <div class="roster-stat">
+                        <span class="roster-stat-value">0</span>
+                        <span class="roster-stat-label">Eligible to Play</span>
+                    </div>
+
+                </div>
+
+                <div class="roster-flag">
+
+                    <div class="roster-flag-text">
+                        <strong>8 pending requests need your response</strong>
+                        <p>Players have asked to join Boston FC. Review and respond in Add Players.</p>
+                    </div>
+
+                    <a href="#" class="dash-btn dash-btn-sm">Review Requests</a>
+
+                </div>
+
+                <p class="text-muted-sm">0 outstanding invites awaiting a player response.</p>
+
+            </div>
+
+            <div class="action-grid">
+
+                <a href="#" class="action-card">
+                    <strong>Add Players</strong>
+                    <span>Search for players, send invites, respond to join requests, and edit your team's ad shown to players searching for a new team.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Edit Roster</strong>
+                    <span>View all players and their registration status, drop players, print temporary passcards.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Copy Roster</strong>
+                    <span>Add players to this roster by copying them from the rosters of other teams you manage.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Gameday Roster</strong>
+                    <span>Printer-ready roster for games.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Download Roster</strong>
+                    <span>Download your roster as a spreadsheet.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Contact List</strong>
+                    <span>Print a list of your players and their emergency contacts, just in case.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Email Entire Team</strong>
+                    <span>Send a message to every player on your roster.</span>
+                </a>
+
+            </div>
+
+            <div class="panel-block panel-footnote">
+
+                <p class="text-muted-sm">Trouble with the button above? <a href="#">Try the alternative Email Entire Team link</a>.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Schedule / Player Availability -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>Schedule / Player Availability</h2>
+
+                <a href="uc-2-1a.html" class="panel-header-action">Current &amp; Upcoming Seasons</a>
+
+            </div>
+
+            <div class="panel-block">
+
+                <p class="text-muted-sm">Registered for <strong>Fall 2026 &middot; Over 30 Division 2</strong>. Your upcoming games for Boston FC:</p>
+
+            </div>
+
+            <div class="game-list">
+
+                <div class="game-item">
+
+                    <div class="game-item-matchup">
+
+                        <span class="game-item-team"><img class="team-badge" src="../images/blank_shield.png" width="28" height="28" alt="Boston FC logo"> Boston FC</span>
+
+                        <span class="game-item-vs">vs</span>
+
+                        <span class="game-item-team"><img class="team-badge" src="../images/torres_fc.jpeg" width="28" height="28" alt="Torres FC logo"> Torres FC</span>
+
+                    </div>
+
+                    <div class="game-item-side">
+
+                        <div class="game-item-when">
+                            <span>Sat, Aug 8</span>
+                            <span>9:00 AM</span>
+                        </div>
+
+                        <a href="#" class="game-item-details">Details<span class="visually-hidden"> for Boston FC vs Torres FC, Sat, Aug 8</span></a>
+
+                    </div>
+
+                </div>
+
+                <div class="game-item">
+
+                    <div class="game-item-matchup">
+
+                        <span class="game-item-team"><img class="team-badge" src="../images/blank_shield.png" width="28" height="28" alt="Boston FC logo"> Boston FC</span>
+
+                        <span class="game-item-vs">vs</span>
+
+                        <span class="game-item-team"><img class="team-badge" src="../images/fka_shield.png" width="28" height="28" alt="FC FKA logo"> FC FKA</span>
+
+                    </div>
+
+                    <div class="game-item-side">
+
+                        <div class="game-item-when">
+                            <span>Sun, Aug 16</span>
+                            <span>10:00 AM</span>
+                        </div>
+
+                        <a href="#" class="game-item-details">Details<span class="visually-hidden"> for Boston FC vs FC FKA, Sun, Aug 16</span></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Empty state, shown instead of .game-list when there are no upcoming games:
+            <div class="panel-empty">
+                <p>No games found.</p>
+            </div>
+            -->
+
+            <div class="panel-block">
+
+                <a href="uc-5-1.html" class="action-link">Register for a Tournament</a>
+
+                <a href="uc-4-1.html" class="action-link">Submit Appeal or Protest</a>
+
+            </div>
+
+        </section>
+
+        <!-- Team Details -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>Team Details</h2>
+
+                <a href="#" class="panel-header-action">Map to Homefield Info</a>
+
+            </div>
+
+            <div class="panel-block">
+
+                <form class="team-form">
+
+                    <div class="team-form-row">
+                        <label class="label" for="team-name">Name</label>
+                        <input type="text" id="team-name" value="Boston FC">
+                    </div>
+
+                    <div class="team-form-row">
+                        <label class="label">Colors</label>
+                        <div class="team-colors-inputs">
+                            <label class="color-input-group"><input type="color" value="#122749"> Home</label>
+                            <label class="color-input-group"><input type="color" value="#ffffff"> Away</label>
+                        </div>
+                    </div>
+
+                    <div class="team-form-row">
+                        <label class="label" for="team-logo">Logo</label>
+                        <img src="../images/blank_shield.png" alt="Current team logo" class="current-logo-preview">
+                        <input type="file" id="team-logo">
+                    </div>
+
+                    <div class="team-form-row">
+                        <label class="label" for="team-picture">Picture</label>
+                        <input type="file" id="team-picture">
+                    </div>
+
+                    <button class="dash-btn" type="button">Update Team Details</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- Field and Time -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>Field and Time</h2>
+
+            </div>
+
+            <div class="panel-block">
+
+                <form class="team-form">
+
+                    <div class="team-form-row">
+                        <label class="label" for="homefield">Homefield</label>
+                        <select id="homefield">
+                            <option>The Park School - INDOOR &mdash; 171 Goddard Ave, Brookline MA</option>
+                            <option>Dacey Community Field (Grass) &mdash; 656 Lincoln St, Franklin MA</option>
+                        </select>
+                    </div>
+
+                    <div class="team-form-row">
+                        <label class="label" for="starttime">Starttime</label>
+                        <input type="text" id="starttime" value="9:00 AM">
+                        <p class="hint">Normal kickoff time</p>
+                    </div>
+
+                    <button class="dash-btn" type="button">Update Home Field Details</button>
+
+                </form>
+
+                <a href="#" class="action-link">Configure Shared Field Schedule</a>
+
+                <a href="#" class="action-link">Request or Download Certificate of Liability Insurance</a>
+
+            </div>
+
+        </section>
+
+        <!-- Team Managers -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>Team Managers</h2>
+
+                <a href="#" class="panel-header-action">Mail All Managers</a>
+
+            </div>
+
+            <div class="panel-block">
+
+                <p class="text-muted-sm">You may have up to 3 managers (2 of 3 used). All managers have the same privileges to add or drop players <strong>and managers</strong>.</p>
+
+                <ul class="manager-list">
+
+                    <li class="manager-item">
+
+                        <div class="manager-avatar">MC</div>
+
+                        <div class="manager-info">
+                            <span class="manager-role">Head Manager</span>
+                            <a href="#" class="manager-name">Max Carty</a>
+                            <span class="manager-contact">home: 617-285-1095 &middot; cell: 617-285-1095</span>
+                            <span class="manager-flag">Reg Issues</span>
+                        </div>
+
+                        <button type="button" class="manager-remove">Remove</button>
+
+                    </li>
+
+                    <li class="manager-item">
+
+                        <div class="manager-avatar manager-avatar-alt">JR</div>
+
+                        <div class="manager-info">
+                            <span class="manager-role">Manager</span>
+                            <a href="#" class="manager-name">Jordan Reyes</a>
+                            <span class="manager-contact">cell: 617-555-0148</span>
+                        </div>
+
+                        <button type="button" class="manager-remove">Remove</button>
+
+                    </li>
+
+                </ul>
+
+                <div class="manager-add-row">
+
+                    <label class="label" for="add-manager-input">Enter the new manager's email address or MASS ID number</label>
+
+                    <div class="manager-add-input-row">
+
+                        <input type="text" id="add-manager-input" placeholder="email@example.com or MASS ID">
+
+                        <button type="button" class="dash-btn">Add Manager</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- League Info -->
+        <section class="dash-panel">
+
+            <div class="panel-header">
+
+                <h2>League Info</h2>
+
+            </div>
+
+            <div class="action-grid">
+
+                <a href="#" class="action-card">
+                    <strong>Team List</strong>
+                    <span>Directory of teams in your division.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Suspensions</strong>
+                    <span>View state-wide and league long-term suspensions.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Home Fields</strong>
+                    <span>Map of all fields used by teams in the league.</span>
+                </a>
+
+                <a href="#" class="action-card">
+                    <strong>Officers</strong>
+                    <span>List of directors and officers for the league.</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <div class="team-page-footer-nav">
+
+            <a href="accountv2.html" class="back-link">Back to Dashboard</a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

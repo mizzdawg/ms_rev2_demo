@@ -709,6 +709,8 @@ Layout
     padding:100px 24px 96px;
 
     font-family:'Open Sans',Arial,Helvetica,sans-serif;
+
+    overflow-x:hidden;
 }
 
 
@@ -1216,6 +1218,10 @@ Upcoming Games
 
     align-items:center;
 
+    min-width:0;
+
+    max-width:100%;
+
     gap:8px;
 
     font-size:14px;
@@ -1312,15 +1318,21 @@ Upcoming Games
 
         grid-template-columns:1fr;
 
+        padding:14px 16px;
+
     }
 
     .game-item-side{
 
         flex-direction:row;
 
+        flex-wrap:wrap;
+
         align-items:center;
 
         justify-content:space-between;
+
+        row-gap:8px;
 
     }
 
@@ -1328,9 +1340,17 @@ Upcoming Games
 
         flex-direction:row;
 
-        gap:8px;
+        flex-wrap:wrap;
+
+        gap:4px 8px;
 
         text-align:left;
+
+    }
+
+    .message-item{
+
+        padding:14px 16px;
 
     }
 
@@ -1370,7 +1390,9 @@ Messages
 
     justify-content:space-between;
 
-    gap:12px;
+    flex-wrap:wrap;
+
+    gap:4px 12px;
 
     margin-bottom:4px;
 
@@ -1638,6 +1660,24 @@ Responsive
 
     }
 
+    .team-dash-container{
+
+        padding:100px 16px 96px;
+
+    }
+
+    .game-item{
+
+        padding:16px 20px;
+
+    }
+
+    .message-item{
+
+        padding:16px 20px;
+
+    }
+
 }
 
 /*=========================================================
@@ -1717,5 +1757,619 @@ they don't affect .button/.panel usage on other pages)
     line-height:1.6;
 
     color:#4b5563;
+
+}
+
+/*=========================================================
+Team Management Page
+(shared with Manage Teams dashboard styles above; classes
+below are specific to manage-team.html)
+=========================================================*/
+
+.team-page-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.team-page-logo{
+
+    flex-shrink:0;
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#f3f4f6;
+
+    border:1px solid #e5e7eb;
+
+}
+
+.team-page-footer-nav{
+
+    margin-top:8px;
+
+}
+
+/* Generic padded content block used as a direct child of
+   .dash-panel, alongside .action-grid / .game-list which
+   already carry their own padding. */
+
+.panel-block{
+
+    padding:20px 24px;
+
+}
+
+.panel-block + .action-grid,
+.panel-block + .game-list{
+
+    padding-top:0;
+
+}
+
+.action-grid + .panel-block,
+.game-list + .panel-block{
+
+    padding-top:0;
+
+}
+
+.panel-block > .action-link:first-child{
+
+    padding-top:0;
+
+}
+
+.panel-header-action{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#00703c;
+
+    text-decoration:none;
+
+}
+
+.panel-header-action:hover{
+
+    text-decoration:underline;
+
+}
+
+.status-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:4px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.status-pill-success{
+
+    background:#f6faf7;
+
+    border:1px solid #00703c;
+
+    color:#00703c;
+
+}
+
+.text-muted-sm{
+
+    font-size:14px;
+
+    color:#6b7280;
+
+}
+
+.text-muted-sm a{
+
+    font-weight:500;
+
+}
+
+.dash-btn-sm{
+
+    height:32px;
+
+    padding:0 14px;
+
+    font-size:13px;
+
+}
+
+/* Roster summary */
+
+.roster-summary{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.roster-stats{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+}
+
+.roster-stat{
+
+    flex:1;
+
+    min-width:140px;
+
+    padding:16px 20px;
+
+    background:#f9fafb;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:10px;
+
+}
+
+.roster-stat-value{
+
+    display:block;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#0b0c0c;
+
+}
+
+.roster-stat-value .roster-stat-max{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#6b7280;
+
+}
+
+.roster-stat-label{
+
+    display:block;
+
+    margin-top:4px;
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+.roster-flag{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    padding:16px 20px;
+
+    border:1px solid #f3d0cc;
+
+    border-left:3px solid #d4351c;
+
+    background:#fdf2f1;
+
+    border-radius:10px;
+
+}
+
+.roster-flag-text strong{
+
+    display:block;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#0b0c0c;
+
+}
+
+.roster-flag-text p{
+
+    margin:2px 0 0;
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+/* Team Details / Field and Time forms */
+
+.team-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.team-form-row{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    max-width:480px;
+
+}
+
+.team-form-row select{
+
+    width:100%;
+
+    padding:11px 14px;
+
+    border:2px solid #6b7280;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    color:#0b0c0c;
+
+    background:#fff;
+
+}
+
+.team-form-row select:focus{
+
+    outline:3px solid #00703c;
+
+    outline-offset:1px;
+
+    border-color:#00703c;
+
+}
+
+.team-colors-inputs{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.color-input-group{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+    color:#0b0c0c;
+
+}
+
+.color-input-group input[type="color"]{
+
+    width:40px;
+
+    height:40px;
+
+    padding:2px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+}
+
+.current-logo-preview{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:10px;
+
+    object-fit:cover;
+
+    background:#f3f4f6;
+
+    border:1px solid #e5e7eb;
+
+    margin-bottom:4px;
+
+}
+
+/* Team Managers */
+
+.manager-list{
+
+    margin:16px 0 0;
+
+    padding:0;
+
+    list-style:none;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+.manager-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.manager-avatar{
+
+    flex-shrink:0;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#122749;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.02em;
+
+}
+
+.manager-avatar-alt{
+
+    background:#00703c;
+
+}
+
+.manager-info{
+
+    flex:1;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+.manager-role{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+    text-transform:uppercase;
+
+    color:#6b7280;
+
+}
+
+.manager-name{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#00703c;
+
+    text-decoration:none;
+
+}
+
+.manager-name:hover{
+
+    text-decoration:underline;
+
+}
+
+.manager-contact{
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+.manager-flag{
+
+    display:inline-flex;
+
+    align-self:flex-start;
+
+    margin-top:2px;
+
+    padding:2px 8px;
+
+    border-radius:999px;
+
+    background:#fdf2f1;
+
+    color:#d4351c;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.03em;
+
+    text-transform:uppercase;
+
+}
+
+.manager-remove{
+
+    flex-shrink:0;
+
+    background:none;
+
+    border:none;
+
+    padding:6px 10px;
+
+    border-radius:6px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#6b7280;
+
+    cursor:pointer;
+
+}
+
+.manager-remove:hover{
+
+    color:#d4351c;
+
+    background:#fdf2f1;
+
+}
+
+.manager-add-row{
+
+    margin-top:20px;
+
+    padding-top:20px;
+
+    border-top:1px solid #e5e7eb;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.manager-add-input-row{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.manager-add-input-row input{
+
+    flex:1;
+
+    min-width:220px;
+
+    max-width:360px;
+
+}
+
+@media (max-width:700px){
+
+    .roster-flag{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .manager-item{
+
+        flex-wrap:wrap;
+
+    }
+
+    .manager-remove{
+
+        margin-left:64px;
+
+    }
+
+    .team-page-heading{
+
+        gap:12px;
+
+    }
+
+    .team-page-logo{
+
+        width:44px;
+
+        height:44px;
+
+    }
 
 }
