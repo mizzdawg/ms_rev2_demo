@@ -2450,3 +2450,232 @@ below are specific to manage-team.html)
     }
 
 }
+
+/* ==========================================
+   PAYMENT BREAKDOWN LEDGER
+   ========================================== */
+
+.ledger-intro {
+
+    margin: -16px 0 24px;
+
+    font-size: 16px;
+
+    color: #4b5563;
+
+}
+
+.ledger {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 0 0 32px;
+
+    font-size: 15px;
+
+}
+
+.ledger caption {
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+    color: #6b7280;
+
+    padding-bottom: 10px;
+
+}
+
+.ledger th,
+.ledger td {
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    vertical-align: top;
+
+    text-align: left;
+
+}
+
+.ledger thead th {
+
+    padding-top: 0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.02em;
+
+    color: #6b7280;
+
+    border-bottom: 1px solid #d1d5db;
+
+}
+
+.ledger .ledger-amount {
+
+    width: 130px;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    font-variant-numeric: tabular-nums;
+
+}
+
+.ledger-item {
+
+    font-weight: 600;
+
+    color: #0b0c0c;
+
+}
+
+.ledger-note {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-weight: 400;
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+}
+
+.ledger-credit .ledger-amount {
+
+    color: #00703c;
+
+}
+
+.ledger tfoot .ledger-item,
+.ledger tfoot .ledger-amount {
+
+    padding-top: 18px;
+
+    border-bottom: 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #0b0c0c;
+
+}
+
+.ledger tfoot tr {
+
+    border-top: 2px solid #0b0c0c;
+
+}
+
+@media (max-width: 600px) {
+
+    .ledger .ledger-amount {
+
+        width: 100px;
+
+    }
+
+    .ledger tfoot .ledger-item,
+    .ledger tfoot .ledger-amount {
+
+        font-size: 18px;
+
+    }
+
+}
+
+.amount-due {
+
+    margin: 0 0 32px;
+
+    padding: 20px 24px;
+
+    border: 1px solid #e5e7eb;
+
+    border-left: 4px solid #00703c;
+
+    border-radius: 8px;
+
+    background: #f6faf7;
+
+}
+
+.amount-due-label {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+    color: #6b7280;
+
+}
+
+.amount-due-value {
+
+    margin: 4px 0 0;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #0b0c0c;
+
+    font-variant-numeric: tabular-nums;
+
+}
+
+.amount-due-note {
+
+    margin: 8px 0 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #4b5563;
+
+}
+
+.amount-due-note a {
+
+    color: #005ea5;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+}
+
+.amount-due-note a:hover {
+
+    text-decoration: underline;
+
+}

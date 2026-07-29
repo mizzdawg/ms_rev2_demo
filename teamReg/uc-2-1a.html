@@ -3,23 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Season Registration - Step 1</title>
+    <title>Season Registration - Payment Breakdown</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="page">
 
-  <a href="#" class="back-link">Back</a>
+  <a href="uc-2-1.html" class="back-link">Back</a>
 
-  <h1>You are registering Boston FC for the Fall 2026 Over 30 Division 2 season. There is a $100 registration fee that needs to be paid.</h1>
+  <h1>Payment Breakdown</h1>
 
+  <p class="ledger-intro">
+    You are registering <strong>Boston FC</strong> for the Fall 2026 Over 30 Division 2 season.
+    Here is how your balance was calculated.
+  </p>
 
- <button class="button"><a href="uc-2-2.html">Continue To Payment</a></button>
+  <table class="ledger">
+
+    <caption>Boston FC &mdash; account ledger</caption>
+
+    <thead>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col" class="ledger-amount">Amount</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td class="ledger-item">
+          Fall 2026 season registration fee
+          <span class="ledger-note">Over 30 Division 2</span>
+        </td>
+        <td class="ledger-amount">$150.00</td>
+      </tr>
+
+      <tr class="ledger-credit">
+        <td class="ledger-item">
+          Account credit applied
+          <span class="ledger-note">Carried over from the 2025 season</span>
+        </td>
+        <td class="ledger-amount">&minus;$40.00</td>
+      </tr>
+
+      <tr class="ledger-credit">
+        <td class="ledger-item">
+          Overpayment refunded to account
+          <span class="ledger-note">2025 season fees paid above the amount owed</span>
+        </td>
+        <td class="ledger-amount">&minus;$10.00</td>
+      </tr>
+
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td class="ledger-item">Total due for 2026</td>
+        <td class="ledger-amount">$100.00</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+  <button class="button"><a href="uc-2-2.html">Continue To Payment</a></button>
 
 </div>
 
- 
-
-</div>
 </body>
 </html>
